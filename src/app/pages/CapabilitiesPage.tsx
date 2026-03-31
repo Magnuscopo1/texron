@@ -1,0 +1,137 @@
+import { Breadcrumb } from "../components/Breadcrumb";
+import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
+import { PageTimestamp } from "../components/PageTimestamp";
+import { motion } from "motion/react";
+import { Monitor, Wrench, Microscope, Box, Cpu, Shield } from "lucide-react";
+
+const facilityAreas = [
+  {
+    title: "Assembly Floor",
+    icon: Wrench,
+    description: "Governor assembly, wiring, and panel fabrication. Climate-controlled for precision electronics.",
+    photos: [
+      { directive: "Wide-angle of governor assembly workstations with DTG-3000 units in various stages of assembly", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "Close-up of control panel wiring in progress — neatly bundled cable runs visible", fallback: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "Hydraulic Testing Bay",
+    icon: Box,
+    description: "Dedicated test bench for actuator refurbishment — pressure testing, stroke verification, leak testing up to 200 bar.",
+    photos: [
+      { directive: "Hydraulic test bench with Voith actuator mounted — pressure gauges and control valves visible", fallback: "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "Close-up of rebuilt servo valve on cleaning bench before final assembly", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "CAD & Re-Engineering Lab",
+    icon: Monitor,
+    description: "3D modeling and reverse-engineering of discontinued OEM components. SolidWorks and AutoCAD workstations.",
+    photos: [
+      { directive: "Engineer at dual-monitor workstation with turbine schematic open in SolidWorks", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "Quality & NDT Lab",
+    icon: Microscope,
+    description: "Non-destructive testing, dimensional inspection, and metallurgical analysis. Hardness testing and surface roughness measurement.",
+    photos: [
+      { directive: "NDT equipment setup — ultrasonic thickness gauge being used on turbine component", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+];
+
+const equipmentList = [
+  { icon: Cpu, name: "Governor Test Simulator", desc: "Full-scale turbine governor testing with simulated load conditions" },
+  { icon: Box, name: "Hydraulic Test Bench (200 bar)", desc: "Actuator stroke, pressure, and leak testing at full operating pressure" },
+  { icon: Shield, name: "Protection Relay Test Set", desc: "Secondary injection testing for all numerical and electromechanical relays" },
+  { icon: Monitor, name: "SolidWorks/AutoCAD Station", desc: "3D modeling for reverse-engineering discontinued OEM components" },
+  { icon: Microscope, name: "Ultrasonic & Hardness Tester", desc: "Non-destructive thickness measurement and material hardness verification" },
+  { icon: Wrench, name: "CNC Machining Center", desc: "Precision machining for custom servo valve bodies and manifolds" },
+];
+
+export function CapabilitiesPage() {
+  return (
+    <div>
+      <section className="bg-[#1A2A3A] text-white py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <Breadcrumb items={[{ label: "Capabilities" }]} />
+          <h1 className="font-[var(--font-heading)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">Capabilities</h1>
+          <h2 className="font-[var(--font-heading)] text-[32px] md:text-[40px] leading-tight mb-3 text-white">
+            In-House Infrastructure
+          </h2>
+          <p className="text-white/60 text-[15px] max-w-2xl">
+            Our Peenya Phase IV facility houses dedicated assembly, testing, and re-engineering capabilities.
+            Everything from governor calibration to hydraulic actuator testing happens under one roof.
+          </p>
+        </div>
+      </section>
+
+      {/* Facility Gallery Sections */}
+      {facilityAreas.map((area, ai) => {
+        const Icon = area.icon;
+        return (
+          <section key={area.title} className={`py-14 ${ai % 2 === 0 ? "bg-white" : "bg-[#F3F4F6]"}`}>
+            <div className="max-w-7xl mx-auto px-4">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 rounded-lg bg-[#1A2A3A]/5 flex items-center justify-center">
+                  <Icon className="w-5 h-5 text-[#1A2A3A]" />
+                </div>
+                <div>
+                  <h3 className="font-[var(--font-heading)] text-[#1A2A3A] text-[20px]">{area.title}</h3>
+                </div>
+              </div>
+              <p className="text-[14px] text-[#6B7280] mb-6 max-w-2xl">{area.description}</p>
+              <div className={`grid grid-cols-1 ${area.photos.length > 1 ? "md:grid-cols-2" : ""} gap-5`}>
+                {area.photos.map((photo, pi) => (
+                  <motion.div
+                    key={pi}
+                    initial={{ opacity: 0, y: 15 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: pi * 0.1, duration: 0.3 }}
+                  >
+                    <PhotoPlaceholder
+                      directive={photo.directive}
+                      fallbackImage={photo.fallback}
+                      aspectRatio="aspect-[16/10]"
+                    />
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Equipment List */}
+      <section className="py-14 bg-[#1A2A3A]">
+        <div className="max-w-7xl mx-auto px-4">
+          <h3 className="font-[var(--font-heading)] text-[11px] tracking-[0.2em] text-[#FF6B35] uppercase mb-1">Key Equipment</h3>
+          <h4 className="font-[var(--font-heading)] text-white text-[24px] mb-6">Testing & Manufacturing Equipment</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {equipmentList.map((eq, i) => {
+              const Icon = eq.icon;
+              return (
+                <motion.div
+                  key={eq.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05, duration: 0.3 }}
+                  className="bg-white/5 border border-white/10 rounded-xl p-5"
+                >
+                  <Icon className="w-5 h-5 text-[#FF6B35] mb-2" />
+                  <h5 className="font-[var(--font-heading)] text-white text-[14px] mb-1">{eq.name}</h5>
+                  <p className="text-[11px] text-white/40">{eq.desc}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <PageTimestamp lastUpdated="March 2026" nextAudit="Q2 2026" />
+    </div>
+  );
+}
