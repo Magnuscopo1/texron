@@ -40,7 +40,7 @@ export function CustomersPage() {
   return (
     <div>
       <section className="bg-[#1A2A3A] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <Breadcrumb items={[{ label: "Customers" }]} />
           <h1 className="font-[var(--font-heading)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">Customers</h1>
           <h2 className="font-[var(--font-heading)] text-[32px] md:text-[40px] leading-tight mb-3 text-white">
@@ -54,7 +54,7 @@ export function CustomersPage() {
 
       {/* Filter */}
       <section className="bg-white border-b border-[#E5E7EB] sticky top-[88px] z-30">
-        <div className="max-w-7xl mx-auto px-4 py-3">
+        <div className="site-shell py-3">
           <div className="flex flex-wrap gap-2">
             {sectors.map((s) => (
               <button
@@ -73,7 +73,7 @@ export function CustomersPage() {
 
       {/* Client Grid */}
       <section className="py-14 bg-[#F3F4F6]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {filtered.map((client, i) => (
               <motion.button

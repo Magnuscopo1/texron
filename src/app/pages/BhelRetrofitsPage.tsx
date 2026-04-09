@@ -1,19 +1,29 @@
-﻿import { Link } from "react-router";
+import { Link } from "react-router";
 import {
   Check,
-  Download,
   Phone,
   ArrowRight,
   Activity,
   Settings,
   Clock,
   Shield,
-  FileText,
 } from "lucide-react";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { FAQ } from "../components/FAQ";
 import { PageTimestamp } from "../components/PageTimestamp";
+import { FluidGallery } from "../components/ui/fluid-gallery";
+
+// Temporary imports from raw workspace assets - to be migrated to /public/assets/gallery/ later
+import bhelImg1 from "../../../imageAssets/IMG-20211116-WA0030(1).jpg.jpeg";
+import bhelImg2 from "../../../imageAssets/IMG-20211116-WA0032(2).jpg.jpeg";
+import bhelImg3 from "../../../imageAssets/IMG_20211016_123409(1).jpg.jpeg";
+
+const galleryImages = [
+  { src: bhelImg1, alt: "BHEL Governor Retrofit Initial Phase", category: "Installation", span: "wide" as const },
+  { src: bhelImg2, alt: "Woodward 505E Replacement View", category: "System Integration" },
+  { src: bhelImg3, alt: "Steam Turbine Setup", category: "Commissioning", span: "tall" as const },
+];
 
 const bhelFAQs = [
   { question: "What BHEL turbine models are compatible with the DTG-3000?", answer: "The DTG-3000 series covers BHEL units from 30 MW to 500 MW including KWU design, indigenous, and Alstom-licensed models. Units with Woodward 505E, BHEL indigenous, and Alstom Alspa governor systems are fully supported. For 660 MW supercritical units with Siemens T3000, a custom assessment is required." },
@@ -40,7 +50,7 @@ export function BhelRetrofitsPage() {
     <div>
       {/* Hero */}
       <section className="bg-[#1E3A5F] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <Breadcrumb items={[
             { label: "Expertise", path: "/expertise" },
             { label: "BHEL Steam Turbine Governor Retrofits" },
@@ -58,18 +68,16 @@ export function BhelRetrofitsPage() {
               <Phone className="w-4 h-4" />
               <span className="text-[13px]">Discuss Your BHEL Unit</span>
             </a>
-            <button className="flex items-center gap-2 border border-white/30 hover:bg-white/10 text-white px-5 py-2.5 rounded-lg transition-colors">
-              <Download className="w-4 h-4" />
-              <span className="text-[13px]">DTG-3000 Datasheet</span>
-              <span className="font-[var(--font-mono)] text-[10px] opacity-60">v3.2</span>
-            </button>
+            <Link to="/contact" className="flex items-center gap-2 border border-white/30 hover:bg-white/10 text-white px-5 py-2.5 rounded-lg transition-colors">
+              <span className="text-[13px]">Request Retrofit Assessment</span>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Key Specs */}
       <section className="bg-white border-b border-[#E8EAED]">
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="site-shell py-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             {[
               { value: "120ms", label: "Response Time" },
@@ -89,7 +97,18 @@ export function BhelRetrofitsPage() {
 
       {/* Compatibility Chart */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
+          <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
+            Field Implementation
+          </h2>
+          <h3 className="text-[#1E3A5F] text-[24px] mb-1">
+            BHEL Retrofit Project Gallery
+          </h3>
+          <p className="text-[13px] text-[#5A6B7D] mb-6">
+            On-site photographic documentation of our recent digital governor upgrades.
+          </p>
+          <FluidGallery images={galleryImages} className="mb-16" />
+
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Compatibility
           </h2>
@@ -140,7 +159,7 @@ export function BhelRetrofitsPage() {
 
       {/* Process */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div>
               <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
@@ -171,30 +190,22 @@ export function BhelRetrofitsPage() {
 
             <div className="space-y-6">
               <PhotoPlaceholder
-                directive="Split-screen Before/After of a legacy governor retrofit â€” corroded Woodward 505E vs. new DTG-3000 installed"
+                directive="Split-screen Before/After of a legacy governor retrofit - corroded Woodward 505E vs. new DTG-3000 installed"
                 fallbackImage="https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVybWFsJTIwcG93ZXIlMjBwbGFudCUyMHN0ZWFtJTIwdHVyYmluZSUyMGVuZ2luZWVyaW5nfGVufDF8fHx8MTc3MzExNjk5Mnww&ixlib=rb-4.1.0&q=80&w=1080"
               />
 
-              {/* Quick Downloads */}
               <div className="bg-[#F5F5F5] rounded-xl p-5">
-                <h4 className="font-[var(--font-mono)] text-[11px] tracking-wider text-[#1E3A5F]/50 mb-3">RELATED DOCUMENTS</h4>
-                <div className="space-y-2">
-                  {[
-                    { name: "DTG-3000 Series Datasheet", ver: "v3.2 | Feb 2026", size: "2.4 MB" },
-                    { name: "BHEL Compatibility Guide", ver: "v1.8 | Jan 2026", size: "1.2 MB" },
-                    { name: "Governor Retrofit Case Studies", ver: "v2.1 | Dec 2025", size: "3.8 MB" },
-                  ].map((doc) => (
-                    <button key={doc.name} className="flex items-center justify-between w-full p-3 bg-white rounded-lg border border-[#E8EAED] hover:border-[#FF6B35]/30 transition-colors group">
-                      <div className="flex items-center gap-2">
-                        <FileText className="w-4 h-4 text-[#1E3A5F]/50" />
-                        <div className="text-left">
-                          <p className="text-[12px] text-[#1E3A5F]">{doc.name}</p>
-                          <p className="font-[var(--font-mono)] text-[10px] text-[#5A6B7D]">{doc.ver} | {doc.size}</p>
-                        </div>
-                      </div>
-                      <Download className="w-4 h-4 text-[#5A6B7D] group-hover:text-[#FF6B35]" />
-                    </button>
-                  ))}
+                <h4 className="font-[var(--font-mono)] text-[11px] tracking-wider text-[#1E3A5F]/50 mb-3">ENGAGEMENT MODEL</h4>
+                <div className="space-y-3">
+                  <div className="rounded-lg border border-[#E8EAED] bg-white p-3">
+                    <p className="text-[12px] text-[#1E3A5F]">Rapid compatibility review within 24 hours</p>
+                  </div>
+                  <div className="rounded-lg border border-[#E8EAED] bg-white p-3">
+                    <p className="text-[12px] text-[#1E3A5F]">Outage-window aligned execution planning</p>
+                  </div>
+                  <div className="rounded-lg border border-[#E8EAED] bg-white p-3">
+                    <p className="text-[12px] text-[#1E3A5F]">Post-commissioning stabilization support</p>
+                  </div>
                 </div>
               </div>
             </div>

@@ -47,7 +47,7 @@ const caseStudies: CaseStudy[] = [
 export function CaseStudySection() {
   return (
     <section className="py-16 bg-[#F5F5F5]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="site-shell">
         <div className="text-center mb-10">
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Field Proven

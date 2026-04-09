@@ -1,4 +1,4 @@
-﻿import { Phone, MessageCircle, FileText } from "lucide-react";
+﻿import { Phone, MessageCircle, Wrench } from "lucide-react";
 import { Link } from "react-router";
 
 export function MobileStickyBar() {
@@ -22,11 +22,11 @@ export function MobileStickyBar() {
           <span className="text-[9px] font-[var(--font-mono)]">WHATSAPP</span>
         </a>
         <Link
-          to="/specs"
+          to="/services"
           className="flex flex-col items-center justify-center gap-0.5 text-white active:bg-white/10 transition-colors"
         >
-          <FileText className="w-4 h-4 text-white/60" />
-          <span className="text-[9px] font-[var(--font-mono)]">SPECS</span>
+          <Wrench className="w-4 h-4 text-white/60" />
+          <span className="text-[9px] font-[var(--font-mono)]">SERVICES</span>
         </Link>
       </div>
     </div>

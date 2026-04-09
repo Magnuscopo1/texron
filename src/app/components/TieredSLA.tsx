@@ -65,7 +65,7 @@ export function TieredSLA() {
 
   return (
     <section className="py-16 bg-white" id="response-protocol">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="site-shell">
         <div className="text-center mb-10">
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Response Protocol
@@ -79,7 +79,7 @@ export function TieredSLA() {
           </p>
         </div>
 
-        {/* Emergency Card — DOMINANT (Full Width on Desktop) */}
+        {/* Emergency Card - DOMINANT (Full Width on Desktop) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export function TieredSLA() {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-white animate-pulse" />
               <span className="font-[var(--font-mono)] text-white text-[13px] tracking-wider">
-                {tiers[0].emoji} EMERGENCY — Plant Trip / Critical Failure
+                {tiers[0].emoji} EMERGENCY - Plant Trip / Critical Failure
               </span>
             </div>
             <AlertTriangle className="w-5 h-5 text-white/80" />
@@ -147,7 +147,7 @@ export function TieredSLA() {
           </div>
         </motion.div>
 
-        {/* Urgent + Planned — Side by side */}
+        {/* Urgent + Planned - Side by side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {tiers.slice(1).map((tier, idx) => {
             const Icon = tier.icon;

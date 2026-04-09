@@ -61,7 +61,7 @@ export function AdminPage() {
           </div>
           <h1 className="text-[24px] text-white">Content Management</h1>
           <p className="text-white/60 text-[13px] mt-1">
-            Quarterly Content Audit — Q1 2026
+            Quarterly Content Audit - Q1 2026
           </p>
         </div>
       </div>
@@ -187,7 +187,7 @@ export function AdminPage() {
                 <Calendar className="w-4 h-4 text-[#FF6B35]" />
                 <span className="font-[var(--font-mono)] text-[11px] tracking-wider text-white/60">NEXT AUDIT</span>
               </div>
-              <p className="text-[14px]">Q2 2026 — June 2026</p>
+              <p className="text-[14px]">Q2 2026 - June 2026</p>
               <p className="text-white/50 text-[11px] mt-1">
                 Review all OEM matrices, update project counters, verify PDF versions
               </p>

@@ -1,10 +1,10 @@
-﻿import { Link } from "react-router";
+import { Link } from "react-router";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
     <footer className="bg-[#1A2A3A] text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="site-shell py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-4">
@@ -50,7 +50,7 @@ export function Footer() {
               { label: "BHEL Turbine Retrofits", path: "/bhel-steam-turbine-governor-retrofits" },
               { label: "Voith Hydraulic Systems", path: "/voith-hydraulic-troubleshooting-spares" },
               { label: "RLA Studies", path: "/rla-studies-thermal-power-plants-bangalore" },
-              { label: "Spec Sheets", path: "/specs" },
+              { label: "Long-Term Service Agreements", path: "/services/ltsa-amc-services" },
             ].map((link) => (
               <Link key={link.path} to={link.path} className="block text-[13px] text-white/50 hover:text-white transition-colors">
                 {link.label}
@@ -92,7 +92,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-2">
+        <div className="site-shell py-4 flex flex-col md:flex-row items-center justify-between gap-2">
           <p className="text-[11px] text-white/20 font-[var(--font-mono)]">
             &copy; 2026 Texron Power Plant Systems Pvt. Ltd. All rights reserved.
           </p>

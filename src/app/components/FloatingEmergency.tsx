@@ -20,7 +20,7 @@ export function FloatingEmergency() {
             <div className="flex items-center justify-between mb-3">
               <span className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-red-600 uppercase flex items-center gap-1.5">
                 <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                Emergency Contacts
+                
               </span>
               <button onClick={() => setExpanded(false)} className="text-[#5A6B7D] hover:text-[#1E3A5F] p-1">
                 <X className="w-4 h-4" />

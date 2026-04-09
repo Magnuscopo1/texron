@@ -1,23 +1,25 @@
 import { CheckCircle, Shield, Award, Users, Anchor, FileCheck, MapPin } from "lucide-react";
 import { SEO } from "../seo/SEO";
-import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
+
+// Actual workspace assets for founders / engineering background
+import aboutStoryImg from "../../../imageAssets/IMG_20210217_162327.jpg.jpeg";
 
 export function AboutPage() {
   return (
     <div>
       <SEO 
-        title="About Texron Power — Turbine Engineering Experts Since Bengaluru" 
+        title="About Texron Power - Turbine Engineering Experts Since Bengaluru" 
         description="Learn about Texron Power's team of turbine engineers with 30+ years of experience in steam and hydro power plant services. ISO certified. Trusted by plants across India." 
       />
 
       {/* Hero Section */}
       <section className="bg-[#1E3A5F] text-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <h1 className="text-[32px] md:text-[48px] font-bold leading-tight mb-6 text-white max-w-4xl">
             We're a team of turbine engineers who love solving problems that others call impossible.
           </h1>
           <p className="text-white/80 text-[18px] max-w-3xl mb-4 leading-relaxed">
-            Texron Power Plant Systems was founded by engineers, for engineers. Our roots are in the field — in turbine halls, generator bays, and control rooms across India. We understand that downtime isn't just an inconvenience; it's lost production, revenue, and credibility for your operation.
+            Texron Power Plant Systems was founded by engineers, for engineers. Our roots are in the field - in turbine halls, generator bays, and control rooms across India. We understand that downtime isn't just an inconvenience; it's lost production, revenue, and credibility for your operation.
           </p>
           <p className="text-white/80 text-[18px] max-w-3xl mb-8 leading-relaxed">
             That's why we approach every project with the same urgency and attention to detail that we'd want if it were our own plant.
@@ -27,7 +29,7 @@ export function AboutPage() {
 
       {/* Our Story */}
       <section className="py-16 bg-white border-b border-[#E8EAED]">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
               Our Story
@@ -39,24 +41,31 @@ export function AboutPage() {
               Texron was born from a simple observation: too many power plants were struggling with aging turbine systems, and the available solutions were either too expensive, too slow, or just not reliable enough.
             </p>
             <p className="text-[#5A6B7D] text-[15px] mb-4 leading-relaxed">
-              So our founders — with decades of combined experience across thermal and hydro plants — decided to build something better: a nimble, technically strong company that could deliver world-class turbine solutions with the speed and flexibility that large OEMs simply can't match.
+              So our founders - with decades of combined experience across thermal and hydro plants - decided to build something better: a nimble, technically strong company that could deliver world-class turbine solutions with the speed and flexibility that large OEMs simply can't match.
             </p>
             <p className="text-[#5A6B7D] text-[15px] leading-relaxed">
-              Today, we proudly hold ISO 9001:2015 certification — a reflection of our commitment to quality at every stage of every project.
+              Today, we proudly hold ISO 9001:2015 certification - a reflection of our commitment to quality at every stage of every project.
             </p>
           </div>
-          <div className="rounded-xl overflow-hidden shadow-xl border border-[#E8EAED]">
-             <PhotoPlaceholder 
-                directive="Historical engineering site or founders inspecting a power plant." 
-                fallbackImage="https://images.unsplash.com/photo-1541888081121-68936b85fae4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxwcm9qZWN0JTIwZW5naW5lZXJpbmd8ZW58MHx8fHwxNzEyOTgwNTQwfDA&ixlib=rb-4.1.0&q=80&w=1080" 
-              />
+          <div className="rounded-xl overflow-hidden shadow-xl border border-[#E8EAED] relative group">
+             <div className="aspect-[4/3] bg-muted relative">
+                <img 
+                  src={aboutStoryImg}
+                  alt="Texron Engineering Foundation and field assessment"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur text-[#1E3A5F] text-[13px] px-4 py-2.5 rounded shadow-sm border border-[#E8EAED] font-medium text-center">
+                  Rooted in actual industrial and field-site expertise.
+                </div>
+             </div>
           </div>
         </div>
       </section>
 
       {/* Meet the Leadership */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
               Leadership
@@ -127,7 +136,7 @@ export function AboutPage() {
 
       {/* Our Values & Certs */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-3 gap-12">
           
           <div className="lg:col-span-2">
             <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
@@ -144,7 +153,7 @@ export function AboutPage() {
                   <h4 className="text-[#1A2A3A] font-semibold text-[18px]">Quality First</h4>
                 </div>
                 <p className="text-[14px] text-[#5A6B7D] leading-relaxed">
-                  Every repair and retrofit we carry out follows documented, condition-based procedures. We don't guess — we diagnose, plan, and execute with precision.
+                  Every repair and retrofit we carry out follows documented, condition-based procedures. We don't guess - we diagnose, plan, and execute with precision.
                 </p>
               </div>
               <div>
@@ -153,7 +162,7 @@ export function AboutPage() {
                   <h4 className="text-[#1A2A3A] font-semibold text-[18px]">Transparency Always</h4>
                 </div>
                 <p className="text-[14px] text-[#5A6B7D] leading-relaxed">
-                  You'll always know what we're doing, why we're doing it, and what it costs. We don't believe in surprises — especially when your turbine is offline.
+                  You'll always know what we're doing, why we're doing it, and what it costs. We don't believe in surprises - especially when your turbine is offline.
                 </p>
               </div>
               <div>
@@ -190,7 +199,7 @@ export function AboutPage() {
                 </li>
                 <li className="flex gap-3 text-[15px] items-start">
                   <MapPin className="w-5 h-5 text-[#FF6B35] shrink-0 mt-0.5" />
-                  <span>Operations based in Peenya Industrial Area — one of Asia's largest industrial clusters</span>
+                  <span>Operations based in Peenya Industrial Area - one of Asia's largest industrial clusters</span>
                 </li>
              </ul>
           </div>

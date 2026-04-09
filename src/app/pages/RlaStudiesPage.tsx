@@ -3,6 +3,18 @@ import { CheckCircle, Shield, Phone, ArrowRight, FileSearch, ArrowDown } from "l
 import { SEO } from "../seo/SEO";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { PageTimestamp } from "../components/PageTimestamp";
+import { FluidGallery } from "../components/ui/fluid-gallery";
+
+// Temporary imports from raw workspace assets - to be migrated to /public/assets/gallery/ later
+import rlaImg1 from "../../../imageAssets/IMG-20191105-WA0059.jpg.jpeg";
+import rlaImg2 from "../../../imageAssets/IMG-20191105-WA0064.jpg.jpeg";
+import rlaImg3 from "../../../imageAssets/IMG-20191105-WA0041.jpg.jpeg";
+
+const galleryImages = [
+  { src: rlaImg1, alt: "Turbine Core Inspection", category: "Condition Assessment", span: "wide" as const },
+  { src: rlaImg2, alt: "Insulation Resistance Testing", category: "Diagnostics" },
+  { src: rlaImg3, alt: "Partial Discharge Analysis Setup", category: "RLA Study", span: "tall" as const },
+];
 
 export function RlaStudiesPage() {
   return (
@@ -13,7 +25,7 @@ export function RlaStudiesPage() {
       />
 
       <section className="bg-[#1E3A5F] text-white py-12 md:py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <Breadcrumb items={[
             { label: "Services", path: "/services" },
             { label: "RLA Studies & Condition Assessment" },
@@ -38,7 +50,7 @@ export function RlaStudiesPage() {
       </section>
 
       <section className="py-16 bg-white border-b border-[#E8EAED]">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="site-shell grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
               Why Commission an RLA?
@@ -80,11 +92,26 @@ export function RlaStudiesPage() {
         </div>
       </section>
 
+      <section className="py-16 bg-[#F5F5F5]">
+        <div className="site-shell">
+          <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
+            Field Diagnostics
+          </h2>
+          <h3 className="text-[#1E3A5F] text-[24px] mb-1">
+            RLA Testing in Action
+          </h3>
+          <p className="text-[13px] text-[#5A6B7D] mb-6">
+            Visual breakdown of our on-site condition assessment and high-voltage testing procedures.
+          </p>
+          <FluidGallery images={galleryImages} />
+        </div>
+      </section>
+
       <section className="bg-[#1E3A5F] text-white py-12 text-center">
          <div className="max-w-2xl mx-auto px-4">
             <h3 className="text-[24px] font-semibold mb-4">Receive a Comprehensive Report</h3>
             <p className="text-white/70 text-[15px] mb-8">
-               You receive a detailed written report with the findings from every test, an assessment of remaining life, and specific recommendations—paving the way for continued operation, targeted refurbishment, or replacement.
+               You receive a detailed written report with the findings from every test, an assessment of remaining life, and specific recommendations - paving the way for continued operation, targeted refurbishment, or replacement.
             </p>
             <Link to="/contact" className="inline-block bg-[#FF6B35] hover:bg-[#e55a2a] px-8 py-3 rounded text-white font-semibold transition-colors">
                Schedule an RLA Study

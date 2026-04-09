@@ -5,7 +5,7 @@ const milestones = [
   { year: "2003", title: "BHEL Vendor Approval", desc: "Approved as authorized retrofit partner for BHEL steam turbine governors" },
   { year: "2007", title: "Voith Hydraulic Division", desc: "Expanded into Voith-compatible hydraulic actuator refurbishment and spares" },
   { year: "2012", title: "ISO 9001 Certification", desc: "Certified quality management system for power plant equipment services" },
-  { year: "2016", title: "Digital Governor Launch", desc: "DTG-3000 series launched — digital replacement for legacy Woodward systems" },
+  { year: "2016", title: "Digital Governor Launch", desc: "DTG-3000 series launched - digital replacement for legacy Woodward systems" },
   { year: "2019", title: "RLA & NDT Division", desc: "Residual Life Assessment services for thermal power plants across South India" },
   { year: "2022", title: "500th Retrofit Milestone", desc: "Completed 500th governor retrofit across NTPC, KPCL, and private plants" },
   { year: "2026", title: "28 Years Strong", desc: "Serving 150+ power plants with 24/7 emergency response from Bengaluru" },
@@ -14,7 +14,7 @@ const milestones = [
 export function ExperienceTimeline() {
   return (
     <section className="py-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="site-shell">
         <div className="text-center mb-10">
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Our Journey

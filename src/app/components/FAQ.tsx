@@ -23,8 +23,8 @@ export function FAQ({ title = "Frequently Asked Questions", subtitle, items }: F
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             FAQ
           </h2>
-          <h3 className="text-[#1E3A5F] text-[24px] mb-1">{title}</h3>
-          {subtitle && <p className="text-[13px] text-[#5A6B7D]">{subtitle}</p>}
+          <h3 className="text-[#1E3A5F] text-[24px] leading-tight mb-1">{title}</h3>
+          {subtitle && <p className="text-[13px] text-[#5A6B7D] leading-relaxed max-w-2xl mx-auto">{subtitle}</p>}
         </div>
 
         <div className="space-y-3">
@@ -34,10 +34,10 @@ export function FAQ({ title = "Frequently Asked Questions", subtitle, items }: F
               <div key={i} className="bg-white rounded-xl border border-[#E8EAED] overflow-hidden">
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="w-full flex items-center justify-between px-5 py-4 text-left"
+                  className="w-full flex items-start justify-between gap-3 px-5 py-4 text-left"
                 >
-                  <span className="text-[14px] text-[#1E3A5F] pr-4">{item.question}</span>
-                  <ChevronDown className={`w-4 h-4 text-[#5A6B7D] shrink-0 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                  <span className="text-[14px] text-[#1E3A5F] leading-relaxed font-medium pr-2">{item.question}</span>
+                  <ChevronDown className={`w-4 h-4 text-[#5A6B7D] shrink-0 mt-0.5 transition-transform ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 <AnimatePresence>
                   {isOpen && (

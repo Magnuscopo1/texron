@@ -15,34 +15,34 @@ const blogPosts: BlogPost[] = [
   {
     id: "steam-turbine-overhaul-signs",
     title: "5 Signs Your Steam Turbine Needs an Overhaul (And What to Do About It)",
-    metaDesc: "Worried your steam turbine isn't performing at its best? Here are 5 clear warning signs it's time for a professional overhaul — and how Texron Power can help.",
+    metaDesc: "Worried your steam turbine isn't performing at its best? Here are 5 clear warning signs it's time for a professional overhaul - and how Texron Power can help.",
     readTime: "4 minutes",
     category: "Maintenance Tips",
     content: (
       <>
-        <p className="mb-4">Steam turbines are workhorses — they run for years with minimal fuss. But like any complex machinery, they do send signals when something isn't right. The question is: are you listening?</p>
+        <p className="mb-4">Steam turbines are workhorses - they run for years with minimal fuss. But like any complex machinery, they do send signals when something isn't right. The question is: are you listening?</p>
         <p className="mb-8">Catching problems early can mean the difference between a planned, controlled overhaul and an emergency shutdown that costs you far more in lost production and repairs. Here are five warning signs you shouldn't ignore.</p>
 
         <h3 className="text-[20px] font-semibold text-[#1E3A5F] mt-8 mb-2">1. Increasing Vibration Levels</h3>
-        <p className="mb-4">A gradual rise in bearing vibration is often the earliest indicator of a developing mechanical problem — rotor imbalance, misalignment, bearing wear, or even blade damage. If your vibration readings have been trending upward over the past few months, it's time to investigate.</p>
+        <p className="mb-4">A gradual rise in bearing vibration is often the earliest indicator of a developing mechanical problem - rotor imbalance, misalignment, bearing wear, or even blade damage. If your vibration readings have been trending upward over the past few months, it's time to investigate.</p>
         <div className="bg-[#F5F5F5] p-4 rounded-md mb-6 border-l-4 border-[#FF6B35]">
           <strong>What to do:</strong> Commission a professional vibration analysis to identify the root cause before it escalates.
         </div>
 
         <h3 className="text-[20px] font-semibold text-[#1E3A5F] mt-8 mb-2">2. Unexplained Reduction in Efficiency</h3>
-        <p className="mb-6">Is your turbine generating less power from the same steam input? A drop in isentropic efficiency — even a few percentage points — can indicate blade erosion, increased internal leakage, or fouling. Over time, this translates directly into higher fuel or steam costs.</p>
+        <p className="mb-6">Is your turbine generating less power from the same steam input? A drop in isentropic efficiency - even a few percentage points - can indicate blade erosion, increased internal leakage, or fouling. Over time, this translates directly into higher fuel or steam costs.</p>
 
         <h3 className="text-[20px] font-semibold text-[#1E3A5F] mt-8 mb-2">3. Frequent Unplanned Trips</h3>
-        <p className="mb-6">If your turbine is tripping on protection systems more often than usual — whether for high vibration, low lube oil pressure, or overspeed — something underlying is causing instability. Repeated trips are your turbine's way of asking for attention.</p>
+        <p className="mb-6">If your turbine is tripping on protection systems more often than usual - whether for high vibration, low lube oil pressure, or overspeed - something underlying is causing instability. Repeated trips are your turbine's way of asking for attention.</p>
 
         <h3 className="text-[20px] font-semibold text-[#1E3A5F] mt-8 mb-2">4. Unusual Noises</h3>
-        <p className="mb-6">Grinding, clicking, or unusual rumbling from the turbine casing or gearbox are red flags. These sounds often point to bearing damage, rubbing between rotating and stationary components, or loose internals — all of which need immediate professional assessment.</p>
+        <p className="mb-6">Grinding, clicking, or unusual rumbling from the turbine casing or gearbox are red flags. These sounds often point to bearing damage, rubbing between rotating and stationary components, or loose internals - all of which need immediate professional assessment.</p>
 
         <h3 className="text-[20px] font-semibold text-[#1E3A5F] mt-8 mb-2">5. Steam or Oil Leaks</h3>
         <p className="mb-6">Leaks from gland seals, flanges, or lube oil systems are both a safety concern and a symptom of wear. Left unaddressed, they can escalate into more serious damage.</p>
 
         <h3 className="text-[22px] font-semibold text-[#1E3A5F] pt-6 border-t border-[#E8EAED] mt-8 mb-4">What Happens During a Texron Overhaul?</h3>
-        <p className="mb-4">Our overhaul process is thorough and fully documented. We start with a condition assessment, move through a structured disassembly and inspection, replace what needs replacing, and reassemble to OEM tolerances. You get a detailed report at the end — so you know exactly what was done and why.</p>
+        <p className="mb-4">Our overhaul process is thorough and fully documented. We start with a condition assessment, move through a structured disassembly and inspection, replace what needs replacing, and reassemble to OEM tolerances. You get a detailed report at the end - so you know exactly what was done and why.</p>
         <p className="font-semibold text-[#1E3A5F]">If your turbine is showing any of these signs, don't wait for an emergency. Get in touch with our team at <a href="mailto:info@texronpower.com" className="text-[#FF6B35] hover:underline">info@texronpower.com</a> or call +91 89040 17774 for a consultation.</p>
       </>
     )
@@ -50,28 +50,28 @@ const blogPosts: BlogPost[] = [
   {
     id: "electronic-governor-retrofit",
     title: "Electronic Governor Retrofit for Steam Turbines: What It Is and Why It's Worth It",
-    metaDesc: "Thinking about upgrading your steam turbine's governor system? Learn how an electronic governor retrofit improves speed control, reliability, and efficiency — and what the process involves.",
+    metaDesc: "Thinking about upgrading your steam turbine's governor system? Learn how an electronic governor retrofit improves speed control, reliability, and efficiency - and what the process involves.",
     readTime: "5 minutes",
     category: "Technology & Upgrades",
     content: (
       <>
-        <p className="mb-4">If your steam turbine is still running on a mechanical or older analog governor, you're not alone — and you're not stuck. Hundreds of industrial turbines across India are operating with outdated governing systems that were installed decades ago.</p>
+        <p className="mb-4">If your steam turbine is still running on a mechanical or older analog governor, you're not alone - and you're not stuck. Hundreds of industrial turbines across India are operating with outdated governing systems that were installed decades ago.</p>
         <p className="mb-8 font-semibold">The good news: retrofitting a modern electronic governor is one of the most cost-effective upgrades you can make.</p>
 
         <h3 className="text-[22px] font-semibold text-[#1E3A5F] mt-8 mb-4">What Does a Turbine Governor Actually Do?</h3>
-        <p className="mb-4">The governor is the brain of your turbine's speed control system. It senses the turbine's rotational speed and adjusts the steam admission valves to maintain the desired speed — whether you're running at fixed speed for grid-connected generation or variable speed for a mechanical drive application.</p>
+        <p className="mb-4">The governor is the brain of your turbine's speed control system. It senses the turbine's rotational speed and adjusts the steam admission valves to maintain the desired speed - whether you're running at fixed speed for grid-connected generation or variable speed for a mechanical drive application.</p>
         <p className="mb-8">An old mechanical governor does this with springs and flyweights. A modern electronic governor does it with microprocessors, speed sensors, and precision actuators.</p>
 
         <h3 className="text-[22px] font-semibold text-[#1E3A5F] mt-8 mb-4">Why Consider an Upgrade?</h3>
         
         <h4 className="text-[18px] font-semibold text-[#1E3A5F] mb-2">Better Speed Regulation</h4>
-        <p className="mb-4">Electronic governors offer speed regulation accuracy of ±0.25% or better — significantly tighter than most mechanical systems. This means more stable frequency for your generators and smoother process control.</p>
+        <p className="mb-4">Electronic governors offer speed regulation accuracy of ±0.25% or better - significantly tighter than most mechanical systems. This means more stable frequency for your generators and smoother process control.</p>
 
         <h4 className="text-[18px] font-semibold text-[#1E3A5F] mb-2">Improved Reliability</h4>
-        <p className="mb-4">Mechanical governors have many moving parts — springs, levers, oil dashpots — all of which wear over time. Electronic systems have far fewer mechanical components, which means fewer failure modes.</p>
+        <p className="mb-4">Mechanical governors have many moving parts - springs, levers, oil dashpots - all of which wear over time. Electronic systems have far fewer mechanical components, which means fewer failure modes.</p>
 
         <h4 className="text-[18px] font-semibold text-[#1E3A5F] mb-2">Easier Integration</h4>
-        <p className="mb-8">Modern electronic governors can interface with your DCS or SCADA system, giving you remote monitoring, speed setpoint adjustment, and diagnostic data — all from your control room.</p>
+        <p className="mb-8">Modern electronic governors can interface with your DCS or SCADA system, giving you remote monitoring, speed setpoint adjustment, and diagnostic data - all from your control room.</p>
 
         <h3 className="text-[22px] font-semibold text-[#1E3A5F] mt-8 mb-4 border-t border-[#E8EAED] pt-6">What Does the Retrofit Process Involve?</h3>
         <p className="mb-4">Our retrofit process starts with a site visit and assessment of your existing governor and control system. We then design a tailored solution, including the electronic control unit, speed sensors, electro-hydraulic actuator, and control panel.</p>
@@ -83,7 +83,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: "rla-study-generator",
-    title: "What Is an RLA Study for a Generator — And Does Your Plant Need One?",
+    title: "What Is an RLA Study for a Generator - And Does Your Plant Need One?",
     metaDesc: "An RLA (Remaining Life Assessment) study tells you exactly how much service life is left in your generator. Find out what's involved, when to commission one, and what the results mean for your plant.",
     readTime: "4 minutes",
     category: "Plant Management",
@@ -99,7 +99,7 @@ const blogPosts: BlogPost[] = [
         <ul className="list-disc pl-5 mb-8 space-y-2">
            <li>Your generator has been in service for 15 years or more</li>
            <li>The machine has experienced abnormal operating conditions (overloading, fault events, flooding, fire)</li>
-           <li>You're planning a capital expenditure decision — whether to refurbish or replace</li>
+           <li>You're planning a capital expenditure decision - whether to refurbish or replace</li>
            <li>Your insurer or lender requires evidence of equipment condition</li>
            <li>You want to move from time-based to condition-based maintenance</li>
         </ul>
@@ -116,7 +116,7 @@ const blogPosts: BlogPost[] = [
         </ul>
 
         <h3 className="text-[22px] font-semibold text-[#1E3A5F] mt-8 mb-4 border-b border-[#E8EAED] pb-2">What Do You Get at the End?</h3>
-        <p className="mb-4">You receive a comprehensive written report that includes the findings from every test, a clear assessment of remaining life, and specific recommendations — whether that's continued operation with monitoring, targeted refurbishment, or planning for eventual replacement.</p>
+        <p className="mb-4">You receive a comprehensive written report that includes the findings from every test, a clear assessment of remaining life, and specific recommendations - whether that's continued operation with monitoring, targeted refurbishment, or planning for eventual replacement.</p>
         <p className="mb-6 text-[#5A6B7D]">For plant managers and owners, this report is invaluable for capital planning, insurance purposes, and simply sleeping better at night.</p>
 
         <p className="font-semibold text-[#1E3A5F]  p-4 rounded border border-[#FF6B35] bg-orange-50/50">Ready to know the true health of your generator? Contact our team at <a href="mailto:info@texronpower.com" className="text-[#FF6B35] hover:underline">info@texronpower.com</a> to discuss commissioning an RLA study for your plant.</p>
@@ -166,13 +166,13 @@ export function BlogPage() {
   return (
     <div>
       <SEO 
-        title="Texron Blog — Power Plant Insights & Turbine Maintenance" 
+        title="Texron Blog - Power Plant Insights & Turbine Maintenance" 
         description="Read the latest insights from Texron's engineering team on turbine upgrades, generator RLAs, mechanical overhauls, and power plant optimization." 
       />
 
       {/* Hero Section */}
       <section className="bg-[#1E3A5F] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <h1 className="text-[32px] md:text-[44px] font-bold leading-tight mb-4 text-white">
             Engineering Insights & Articles
           </h1>
@@ -184,7 +184,7 @@ export function BlogPage() {
 
       {/* Blog List Grid */}
       <section className="py-16 bg-[#F5F5F5] min-h-screen">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <div key={post.id} className="bg-white rounded-xl shadow-sm border border-[#E8EAED] overflow-hidden flex flex-col hover:border-[#FF6B35]/50 hover:shadow-lg transition-all">

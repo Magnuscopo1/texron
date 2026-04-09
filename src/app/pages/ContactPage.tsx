@@ -5,28 +5,28 @@ export function ContactPage() {
   return (
     <div>
       <SEO 
-        title="Contact Texron Power | Turbine Services & Products — Bengaluru" 
+        title="Contact Texron Power | Turbine Services & Products - Bengaluru" 
         description="Get in touch with Texron Power Plant Systems in Bengaluru for turbine manufacturing, retrofit, overhauling, and power plant services. Call us or send an enquiry today." 
       />
 
       {/* Hero Section */}
       <section className="bg-[#1E3A5F] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <h1 className="text-[32px] md:text-[44px] font-bold leading-tight mb-4 text-white max-w-4xl">
             Let's Talk Turbines.
           </h1>
           <p className="text-white/80 text-[18px] max-w-3xl leading-relaxed">
-            Whether you have a project in mind, a turbine in trouble, or just want to explore your options — we're here for it. Reach out directly or fill in the enquiry form and our engineering team will get back to you quickly.
+            Whether you have a project in mind, a turbine in trouble, or just want to explore your options - we're here for it. Reach out directly or fill in the enquiry form and our engineering team will get back to you quickly.
           </p>
         </div>
       </section>
 
       {/* Contact Content Grid */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="site-shell grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Enquiry Form */}
-          <div className="bg-white p-8 rounded-xl shadow-sm border border-[#E8EAED]">
+          <div className="lg:col-span-7 bg-white p-8 rounded-xl shadow-sm border border-[#E8EAED] h-fit">
             <h2 className="text-[#1E3A5F] text-[24px] font-semibold mb-6">Send an Enquiry</h2>
             
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
@@ -82,7 +82,7 @@ export function ContactPage() {
           </div>
 
           {/* Contact Details & Map */}
-          <div className="space-y-8">
+          <div className="lg:col-span-5 space-y-8 flex flex-col h-fit">
             <div className="bg-white p-8 rounded-xl shadow-sm border border-[#E8EAED]">
               <h3 className="text-[#1E3A5F] text-[20px] font-semibold mb-6">Contact Information</h3>
               
@@ -96,7 +96,7 @@ export function ContactPage() {
                     <p className="text-[#5A6B7D] text-[14px] leading-relaxed">
                       No. V17, 2nd C, Rajagopalnagar Main Road<br />
                       2nd Stage, Peenya Industrial Area Phase IV<br />
-                      Peenya, Bengaluru, Karnataka — 560 058<br />
+                      Peenya, Bengaluru, Karnataka - 560 058<br />
                       India
                     </p>
                   </div>
@@ -155,20 +155,20 @@ export function ContactPage() {
                   </a>
                </div>
             </div>
-
-            {/* Map Embed Location */}
-            <div className="bg-white p-2 rounded-xl shadow-sm border border-[#E8EAED] w-full h-64 overflow-hidden relative">
-               <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15549.957582737604!2d77.4984!3d13.0039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ce2fb88a8d9%3A0xc34a6565f32a0c6a!2sPeenya%20Industrial%20Area%20Phase%20IV!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
-                  className="w-full h-full border-0 absolute top-0 left-0"
-                  allowFullScreen
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Texron Power Plant Systems Location Map"
-               ></iframe>
-            </div>
-
           </div>
+
+          {/* Map Embed Location - Now Full Width Below Form & Info */}
+          <div className="lg:col-span-12 bg-white p-2 rounded-xl shadow-sm border border-[#E8EAED] w-full h-[400px] overflow-hidden relative mt-4">
+             <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15549.957582737604!2d77.4984!3d13.0039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ce2fb88a8d9%3A0xc34a6565f32a0c6a!2sPeenya%20Industrial%20Area%20Phase%20IV!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                className="w-full h-full border-0 rounded-lg"
+                allowFullScreen
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Texron Power Plant Systems Location Map"
+             ></iframe>
+          </div>
+
         </div>
       </section>
 

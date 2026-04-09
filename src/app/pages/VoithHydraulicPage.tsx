@@ -1,9 +1,21 @@
-﻿import { Link } from "react-router";
+import { Link } from "react-router";
 import { Phone, Download, ArrowRight, FileText, Check, AlertTriangle, Wrench } from "lucide-react";
 import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { FAQ } from "../components/FAQ";
 import { PageTimestamp } from "../components/PageTimestamp";
+import { FluidGallery } from "../components/ui/fluid-gallery";
+
+// Temporary imports from raw workspace assets - to be migrated to /public/assets/gallery/ later
+import voithImg1 from "../../../imageAssets/IMG20230518115707.jpg.jpeg";
+import voithImg2 from "../../../imageAssets/IMG20230518115721.jpg.jpeg";
+import voithImg3 from "../../../imageAssets/IMG_20210209_235945.jpg.jpeg";
+
+const galleryImages = [
+  { src: voithImg1, alt: "Voith Hydraulic Actuator Inspection", category: "Troubleshooting", span: "wide" as const },
+  { src: voithImg2, alt: "Servo Valve Replacement", category: "Spares Delivery" },
+  { src: voithImg3, alt: "Hydraulic System Breakdown Analysis", category: "Dismantling", span: "tall" as const },
+];
 
 const voithFAQs = [
   { question: "Can you supply spares for discontinued Voith models?", answer: "Yes. We reverse-engineer spares for Voith R16, R25, R32, and R40 series actuators that are no longer supported by Voith. All components are manufactured to OEM specifications with quality inspection certificates." },
@@ -62,7 +74,7 @@ export function VoithHydraulicPage() {
     <div>
       {/* Hero */}
       <section className="bg-[#1E3A5F] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <Breadcrumb items={[
             { label: "Expertise", path: "/expertise" },
             { label: "Voith Hydraulic Troubleshooting & Spares" },
@@ -90,7 +102,18 @@ export function VoithHydraulicPage() {
 
       {/* Troubleshooting Guide */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
+          <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
+            Field Documentation
+          </h2>
+          <h3 className="text-[#1E3A5F] text-[24px] mb-1">
+            Actuator Breakdown & Assembly
+          </h3>
+          <p className="text-[13px] text-[#5A6B7D] mb-6">
+            Reverse-engineered hydraulic systems and live-site emergency interventions.
+          </p>
+          <FluidGallery images={galleryImages} className="mb-16" />
+
           <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Quick Reference
           </h2>
@@ -145,7 +168,7 @@ export function VoithHydraulicPage() {
 
       {/* Spares Availability */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="lg:col-span-2">
               <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">

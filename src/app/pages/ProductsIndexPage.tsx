@@ -1,6 +1,17 @@
 import { Cog, Settings, Shield, Zap, Power, HardDrive, Activity, Radio, Cpu, Archive, CheckCircle } from "lucide-react";
 import { SEO } from "../seo/SEO";
 import { Link } from "react-router";
+import { FluidGallery } from "../components/ui/fluid-gallery";
+
+import productsImage1 from "../../../imageAssets/IMG_20211016_123430(1).jpg.jpeg";
+import productsImage2 from "../../../imageAssets/IMG20220916174645.jpg.jpeg";
+import productsImage3 from "../../../imageAssets/IMG20240905115307.jpg.jpeg";
+
+const productsSnapshots = [
+  { src: productsImage1, alt: "Steam turbine mechanical assembly and alignment stage", category: "Turbine Build", span: "wide" as const },
+  { src: productsImage2, alt: "Control and protection equipment integration", category: "Controls" },
+  { src: productsImage3, alt: "Hydraulic and electrical product validation setup", category: "Testing", span: "tall" as const },
+];
 
 export function ProductsIndexPage() {
   return (
@@ -12,12 +23,12 @@ export function ProductsIndexPage() {
 
       {/* Hero Section */}
       <section className="bg-[#1E3A5F] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <h1 className="text-[32px] md:text-[44px] font-bold leading-tight mb-4 text-white max-w-4xl">
             Reliable turbine products and power plant equipment.
           </h1>
           <p className="text-white/80 text-[18px] max-w-3xl mb-4 leading-relaxed">
-            From steam turbines to smart control systems, we manufacture and supply the complete range of equipment your power plant needs — designed for reliability, engineered for performance.
+            From steam turbines to smart control systems, we manufacture and supply the complete range of equipment your power plant needs - designed for reliability, engineered for performance.
           </p>
           <p className="text-white/80 text-[18px] max-w-3xl leading-relaxed">
             All our products are designed and built with the flexibility to integrate with your existing plant setup, whether you're running legacy equipment from the 1990s or a modern DCS-controlled facility.
@@ -25,9 +36,27 @@ export function ProductsIndexPage() {
         </div>
       </section>
 
+      {/* Product Snapshot Gallery */}
+      <section className="py-16 bg-white border-b border-[#E8EAED]">
+        <div className="site-shell">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
+              Product Program
+            </h2>
+            <h3 className="text-[#1E3A5F] text-[28px] md:text-[32px] font-semibold mb-4">
+              Built for Legacy Fitment and Modern Control
+            </h3>
+            <p className="text-[#5A6B7D] text-[15px]">
+              Visual context of the equipment ecosystem we deliver across turbine, control, and protection domains.
+            </p>
+          </div>
+          <FluidGallery images={productsSnapshots} />
+        </div>
+      </section>
+
       {/* Main Categories */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4 space-y-16">
+        <div className="site-shell space-y-16">
           
           {/* Steam Turbines */}
           <div className="bg-white rounded-xl shadow-sm border border-[#E8EAED] overflow-hidden">
@@ -40,7 +69,7 @@ export function ProductsIndexPage() {
               </div>
               <p className="text-[#FF6B35] font-[var(--font-mono)] text-[12px] uppercase mb-4 tracking-[0.1em]">Custom-Engineered for Your Process</p>
               <p className="text-[#5A6B7D] text-[15px] mb-6 leading-relaxed max-w-4xl">
-                We design and supply steam turbines for a wide range of industrial applications — from sugar mills and paper plants to utility power stations. Our turbines are engineered to match your specific steam parameters, load requirements, and site conditions.
+                We design and supply steam turbines for a wide range of industrial applications - from sugar mills and paper plants to utility power stations. Our turbines are engineered to match your specific steam parameters, load requirements, and site conditions.
               </p>
               <h4 className="font-semibold text-[#1A2A3A] text-[14px] mb-3">Key Features</h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-[14px] text-[#5A6B7D]">

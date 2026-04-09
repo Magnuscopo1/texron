@@ -1,4 +1,3 @@
-import { PhotoPlaceholder } from "../components/PhotoPlaceholder";
 import {
   Settings,
   Shield,
@@ -7,12 +6,22 @@ import {
   Cpu,
   Cog,
   ArrowRight,
-  Download,
-  FileText,
 } from "lucide-react";
 import { Link } from "react-router";
 import { Breadcrumb } from "../components/Breadcrumb";
 import { PageTimestamp } from "../components/PageTimestamp";
+import { FluidGallery } from "../components/ui/fluid-gallery";
+
+import methodologyImage from "../../../imageAssets/IMG-20211123-WA0030(2).jpg.jpeg";
+import serviceImage1 from "../../../imageAssets/IMG-20211116-WA0030(1).jpg.jpeg";
+import serviceImage2 from "../../../imageAssets/IMG20230518182633.jpg.jpeg";
+import serviceImage3 from "../../../imageAssets/IMG-20191105-WA0055.jpg.jpeg";
+
+const expertiseSnapshots = [
+  { src: serviceImage1, alt: "Digital governor retrofit at steam turbine panel", category: "Governor Systems", span: "wide" as const },
+  { src: serviceImage2, alt: "Hydraulic actuator troubleshooting and repair workflow", category: "Hydraulic Systems" },
+  { src: serviceImage3, alt: "RLA and diagnostic inspection on turbine components", category: "RLA Diagnostics", span: "tall" as const },
+];
 
 const services = [
   {
@@ -82,8 +91,8 @@ const services = [
       "PLC programming for turbine sequencing",
       "Panel retrofits for legacy BHEL/Siemens systems",
     ],
-    seoLink: "/specs",
-    seoLabel: "Control Panel Specs",
+    seoLink: "/contact",
+    seoLabel: "Control Panel Consultation",
   },
   {
     icon: Cog,
@@ -106,7 +115,7 @@ export function ExpertisePage() {
     <div>
       {/* Page Header */}
       <section className="bg-[#1E3A5F] text-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <Breadcrumb items={[{ label: "Expertise" }]} />
           <h1 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
             Expertise
@@ -116,17 +125,11 @@ export function ExpertisePage() {
           </h2>
           <p className="text-white/60 text-[15px] max-w-2xl">
             Our engineering methodology prioritizes transparency and measurable outcomes.
-            Every intervention follows our Condition-Based Repair Criteria — download it below.
+            Every intervention follows our Condition-Based Repair Criteria with clear diagnostics and execution checkpoints.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <button className="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a2a] text-white px-5 py-2.5 rounded-lg transition-colors">
-              <Download className="w-4 h-4" />
-              <span className="text-[13px]">Condition-Based Repair Criteria</span>
-              <span className="font-[var(--font-mono)] text-[10px] opacity-70">v2.4 | Oct 2025</span>
-            </button>
-            <Link to="/specs" className="flex items-center gap-2 border border-white/30 hover:bg-white/10 text-white px-5 py-2.5 rounded-lg transition-colors">
-              <FileText className="w-4 h-4" />
-              <span className="text-[13px]">All Spec Sheets</span>
+            <Link to="/contact" className="flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a2a] text-white px-5 py-2.5 rounded-lg transition-colors">
+              <span className="text-[13px]">Request Methodology Briefing</span>
             </Link>
           </div>
         </div>
@@ -134,7 +137,7 @@ export function ExpertisePage() {
 
       {/* Services Grid */}
       <section className="py-16 bg-[#F5F5F5]">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {services.map((service) => {
               const Icon = service.icon;
@@ -173,9 +176,27 @@ export function ExpertisePage() {
         </div>
       </section>
 
+      {/* Service Execution Snapshot */}
+      <section className="py-16 bg-white border-y border-[#E8EAED]">
+        <div className="site-shell">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
+              Service Execution
+            </h2>
+            <h3 className="text-[#1E3A5F] text-[28px] md:text-[32px] font-semibold mb-4">
+              On-Site Engineering in Practice
+            </h3>
+            <p className="text-[#5A6B7D] text-[15px]">
+              These snapshots reflect real turbine retrofit, hydraulic, and diagnostic interventions carried out by Texron teams.
+            </p>
+          </div>
+          <FluidGallery images={expertiseSnapshots} />
+        </div>
+      </section>
+
       {/* Methodology Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="site-shell">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-[var(--font-mono)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">
@@ -185,8 +206,8 @@ export function ExpertisePage() {
                 Condition-Based Repair Criteria
               </h3>
               <p className="text-[14px] text-[#5A6B7D] leading-relaxed mb-6">
-                B2B engineers buy into methodologies, not just outcomes. Our publicly available
-                Condition-Based Repair Criteria document outlines our standardized approach to
+                B2B engineers buy into methodologies, not just outcomes. Our
+                Condition-Based Repair Criteria outlines our standardized approach to
                 equipment assessment, failure classification, and repair/replace decision matrices.
               </p>
               <div className="space-y-4">
@@ -205,17 +226,23 @@ export function ExpertisePage() {
                   </div>
                 ))}
               </div>
-              <button className="mt-6 flex items-center gap-2 bg-[#1E3A5F] hover:bg-[#162f4d] text-white px-5 py-3 rounded-lg transition-colors">
-                <Download className="w-4 h-4" />
-                <span className="text-[13px]">Download Full Methodology PDF</span>
-                <span className="font-[var(--font-mono)] text-[10px] opacity-60">v2.4 | 1.6 MB</span>
-              </button>
+              <Link to="/contact" className="mt-6 inline-flex items-center gap-2 bg-[#1E3A5F] hover:bg-[#162f4d] text-white px-5 py-3 rounded-lg transition-colors">
+                <span className="text-[13px]">Talk to an Engineer About Methodology</span>
+              </Link>
             </div>
-            <PhotoPlaceholder
-              directive="Stanley reviewing technical drawings at engineer's workstation, with equipment schematics visible on monitors"
-              fallbackImage="https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZW5naW5lZXIlMjBjb250cm9sJTIwcm9vbSUyMGVxdWlwbWVudHxlbnwxfHx8fDE3NzMxMTY5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-              aspectRatio="aspect-[4/3]"
-            />
+            <div className="rounded-xl overflow-hidden border border-[#E8EAED] shadow-xl relative group">
+              <div className="aspect-[4/3] bg-muted">
+                <img
+                  src={methodologyImage}
+                  alt="Engineering methodology review and panel integration at Texron facility"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-[#1E3A5F] font-[var(--font-mono)] text-[10px] uppercase px-3 py-1.5 rounded shadow-sm">
+                Methodology Desk
+              </div>
+            </div>
           </div>
         </div>
       </section>

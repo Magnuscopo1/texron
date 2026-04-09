@@ -53,10 +53,10 @@ export function Testimonials() {
           <AnimatePresence mode="wait">
             <motion.div
               key={t.id}
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0, x: 40, filter: "blur(4px)" }}
+              animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, x: -40, filter: "blur(4px)" }}
+              transition={{ type: "spring", stiffness: 350, damping: 30 }}
               className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 md:p-10"
             >
               <Quote className="w-8 h-8 text-[#FF6B35]/40 mb-4" />
@@ -78,13 +78,15 @@ export function Testimonials() {
 
           {/* Navigation */}
           <div className="flex items-center justify-center gap-4 mt-6">
-            <button onClick={prev} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-colors">
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={prev} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-colors">
               <ChevronLeft className="w-4 h-4" />
-            </button>
+            </motion.button>
             <div className="flex gap-2">
               {testimonials.map((_, i) => (
-                <button
+                <motion.button
                   key={i}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
                   onClick={() => setCurrent(i)}
                   className={`w-2 h-2 rounded-full transition-colors ${
                     i === current ? "bg-[#FF6B35]" : "bg-white/20"
@@ -92,9 +94,9 @@ export function Testimonials() {
                 />
               ))}
             </div>
-            <button onClick={next} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-colors">
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={next} className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white/50 hover:text-white hover:border-white/40 transition-colors">
               <ChevronRight className="w-4 h-4" />
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>

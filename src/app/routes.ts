@@ -8,11 +8,11 @@ import { ServicesPage } from "./pages/ServicesPage";
 import { CapabilitiesPage } from "./pages/CapabilitiesPage";
 import { CustomersPage } from "./pages/CustomersPage";
 import { BlogPage } from "./pages/BlogPage";
-import { SpecsPage } from "./pages/SpecsPage";
 import { ContactPage } from "./pages/ContactPage";
 import { BhelRetrofitsPage } from "./pages/BhelRetrofitsPage";
 import { VoithHydraulicPage } from "./pages/VoithHydraulicPage";
 import { RlaStudiesPage } from "./pages/RlaStudiesPage";
+import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { AdminPage } from "./pages/AdminPage";
 
 export const router = createBrowserRouter([
@@ -25,10 +25,10 @@ export const router = createBrowserRouter([
       { path: "products", Component: ProductsIndexPage },
       { path: "products/:slug", Component: ProductDetailPage },
       { path: "services", Component: ServicesPage },
+      { path: "services/:serviceSlug", Component: ServiceDetailPage },
       { path: "capabilities", Component: CapabilitiesPage },
       { path: "customers", Component: CustomersPage },
       { path: "blog", Component: BlogPage },
-      { path: "specs", Component: SpecsPage },
       { path: "contact", Component: ContactPage },
       // Legacy routes (kept for backwards compatibility)
       { path: "expertise", Component: ServicesPage },

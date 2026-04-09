@@ -2,22 +2,32 @@
 
 :root {
   --font-size: 16px;
-  --background: #F3F4F6;
-  --foreground: #1A2A3A;
+  /* Neuropsychology Backgrounds: Soft off-white reduces harsh glare and retinal fatigue */
+  --background: #F8FAFC; 
+  /* Deep Slate: High contrast for reading without the burn of pure #000 */
+  --foreground: #0F172A; 
   --card: #ffffff;
-  --card-foreground: #1A2A3A;
+  --card-foreground: #0F172A;
   --popover: #ffffff;
-  --popover-foreground: #1A2A3A;
-  --primary: #1A2A3A;
+  --popover-foreground: #0F172A;
+  
+  /* Primary Action Blue: Globally trusted color for engineering precision */
+  --primary: #0284C7; 
   --primary-foreground: #ffffff;
-  --secondary: #F3F4F6;
-  --secondary-foreground: #1A2A3A;
-  --muted: #E5E7EB;
-  --muted-foreground: #6B7280;
+  --secondary: #F1F5F9;
+  --secondary-foreground: #0F172A;
+  
+  /* Cognitive Load Reduction: Muted Slate 500 pushes secondary data back */
+  --muted: #E2E8F0;
+  --muted-foreground: #64748B;
+  
+  /* High Salience Indicators */
   --accent: #FF6B35;
   --accent-foreground: #ffffff;
-  --destructive: #FF6B35;
+  --destructive: #EF4444; 
   --destructive-foreground: #ffffff;
+  --success: #0284C7; /* Brand-consistent positive emphasis */
+  --warning: #F97316; /* Orange warning for critical attention */
   --border: rgba(26, 42, 58, 0.12);
   --input: transparent;
   --input-background: #ffffff;
@@ -39,28 +49,115 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --font-mono: 'Roboto Mono', monospace;
-  --font-sans: 'Inter', sans-serif;
-  --font-heading: 'Rajdhani', sans-serif;
+  
+  /* Modern Neuropsychology Typography System */
+  /* Perfect Fourth scale, 8px grid, cognitive load management */
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+  --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-heading: 'IBM Plex Sans', -apple-system, sans-serif;
+  
+  /* Size Scale (Perfect Fourth) */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.6875rem; /* 27px */
+  --text-3xl: 2.25rem;   /* 36px */
+  --text-4xl: 3rem;      /* 48px */
+  --text-5xl: 4rem;      /* 64px */
+
+  /* Line Heights */
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.6;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+
+  /* Neuropsychological Spacing System */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+}
+
+/* Applying Base Typography Styles */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Neuropsychological Salience Highlight 
+     Creates a distinct focal anchor without increasing font weight/size */
+  .text-salience-trust {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-accent font-semibold;
+  }
+  .text-salience-success {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-accent font-semibold;
+  }
+  .text-salience-alert {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-400 font-semibold;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  h1 { font-size: var(--text-4xl); font-weight: 700; }
+  h2 { font-size: var(--text-3xl); font-weight: 700; }
+  h3 { font-size: var(--text-2xl); font-weight: 700; }
+  h4 { font-size: var(--text-xl); font-weight: 700; }
+
+  p {
+    max-width: 65ch; /* Optimal line length threshold */
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Improved contrast weight mapping */
+  strong, b {
+    font-weight: 600;
+    color: var(--foreground);
+  }
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
+  /* Rich, cool gray environments to soothe eyes during extended technical documentation reading */
+  --background: #020617; /* Slate 950 */
+  /* Reverses contrast ratio to soft off-white to stop retinal haloing */
+  --foreground: #F1F5F9; /* Slate 100 */
+  --card: #0F172A; /* Slate 900 */
+  --card-foreground: #F1F5F9;
+  --popover: #0F172A;
+  --popover-foreground: #F1F5F9;
+  
+  /* Primary Action Blue: Sustains visibility and tech/trust metrics in dark UI */
+  --primary: #38BDF8; /* Sky 400 */
+  --primary-foreground: #020617; /* Dark text on light blue ensures legibility */
+  --secondary: #1E293B; /* Slate 800 */
+  --secondary-foreground: #F8FAFC; 
+  
+  /* De-emphasized metadata for progressive disclosure and cognitive scanning */
+  --muted: #1E293B;
+  --muted-foreground: #94A3B8; /* Slate 400 */
+  
+  --accent: #FB923C; /* Orange 400 */
+  --accent-foreground: #F8FAFC;
+  --destructive: #EF4444; 
+  --destructive-foreground: #F8FAFC;
+  --success: #38BDF8; /* Sky 400 */
+  --warning: #FB923C; /* Orange 400 */
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
@@ -81,6 +178,25 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
+@supports (animation-timeline: view()) {
+  .reveal-section {
+    animation: fade-in-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 15%;
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(35px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -98,6 +214,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-input-background: var(--input-background);
@@ -122,9 +240,48 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+@layer components {
+  .site-shell {
+    @apply w-full mx-auto max-w-[90rem] px-4 sm:px-5 md:px-8 xl:px-10;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+
+  :where(.typography-rhythm) {
+    --measure: 68ch;
+    --rhythm-xs: var(--space-xs);
+    --rhythm-sm: var(--space-sm);
+    --rhythm-md: var(--space-md);
+    --rhythm-lg: var(--space-lg);
+  }
+
+  /* Low-specificity flow rules: utility classes can still override these where needed. */
+  :where(.typography-rhythm) :where(h1, h2, h3, h4, h5, h6) {
+    text-wrap: balance;
+    margin-block-start: var(--rhythm-lg);
+    margin-block-end: var(--rhythm-sm);
+  }
+
+  :where(.typography-rhythm) :where(p, ul, ol, dl, blockquote, pre, table) {
+    margin-block: var(--rhythm-sm);
+    max-width: var(--measure);
+  }
+
+  :where(.typography-rhythm) :where(li + li) {
+    margin-block-start: var(--rhythm-xs);
+  }
+
+  :where(.typography-rhythm) :where(section, article) {
+    scroll-margin-top: var(--space-xl);
+  }
+
+  :where(.typography-rhythm) :where(h1, h2, h3, h4):first-child,
+  :where(.typography-rhythm) :where(p, ul, ol):first-child {
+    margin-block-start: 0;
   }
 
   body {
@@ -175,4 +332,127 @@
     font-weight: var(--font-weight-normal);
     line-height: 1.5;
   }
+}
+
+@keyframes serviceStreamDrift {
+  0% {
+    transform: translate3d(-8%, 0, 0);
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate3d(8%, 0, 0);
+    opacity: 0.12;
+  }
+}
+
+@keyframes serviceWavePulse {
+  0% {
+    transform: translateX(-15%) scale(0.96);
+    opacity: 0.14;
+  }
+  50% {
+    transform: translateX(0%) scale(1.02);
+    opacity: 0.28;
+  }
+  100% {
+    transform: translateX(15%) scale(0.96);
+    opacity: 0.14;
+  }
+}
+
+@keyframes serviceHubGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.35;
+  }
+}
+
+.service-hub-stream {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(2, 132, 199, 0.45) 40%, rgba(255, 107, 53, 0.38) 60%, transparent 100%);
+  filter: drop-shadow(0 0 10px rgba(2, 132, 199, 0.25));
+  animation: serviceStreamDrift 12s linear infinite;
+}
+
+.service-hub-stream-a {
+  top: 18%;
+}
+
+.service-hub-stream-b {
+  top: 46%;
+  animation-duration: 16s;
+  animation-direction: reverse;
+}
+
+.service-hub-stream-c {
+  top: 74%;
+  animation-duration: 14s;
+}
+
+.service-hub-wave {
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 107, 53, 0.25);
+  background: radial-gradient(circle, rgba(2, 132, 199, 0.14) 0%, rgba(255, 107, 53, 0.08) 48%, transparent 68%);
+  animation: serviceWavePulse 18s ease-in-out infinite;
+}
+
+.service-hub-wave-a {
+  top: -280px;
+  right: -220px;
+}
+
+.service-hub-wave-b {
+  bottom: -300px;
+  left: -260px;
+  animation-duration: 22s;
+  animation-direction: reverse;
+}
+
+.service-hub-glow {
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 107, 53, 0.55) 0%, rgba(255, 107, 53, 0.2) 42%, rgba(2, 132, 199, 0.18) 70%, transparent 100%);
+  box-shadow: 0 0 80px rgba(255, 107, 53, 0.4);
+  animation: serviceHubGlow 2.9s ease-in-out infinite;
+}
+
+.service-hub-list-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 107, 53, 0.5) rgba(17, 40, 63, 0.9);
+}
+
+.service-hub-list-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.service-hub-list-scroll::-webkit-scrollbar-track {
+  background: rgba(17, 40, 63, 0.9);
+  border-radius: 999px;
+}
+
+.service-hub-list-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(255, 107, 53, 0.72), rgba(2, 132, 199, 0.62));
+  border-radius: 999px;
+}
+
+.service-hub-list-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, rgba(255, 107, 53, 0.9), rgba(2, 132, 199, 0.78));
 }

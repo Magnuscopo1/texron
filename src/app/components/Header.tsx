@@ -1,4 +1,4 @@
-﻿import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Phone, Menu, X, MessageCircle, ChevronDown, Zap, Shield, Settings, Wrench, Cpu, Gauge, Radio, AlertTriangle, BarChart3, Box } from "lucide-react";
 
@@ -34,11 +34,11 @@ const productCategories = [
 ];
 
 const serviceItems = [
-  { name: "Governor Retrofits & Upgrades", slug: "/services#retrofits" },
+  { name: "Governor Retrofits & Upgrades", slug: "/bhel-steam-turbine-governor-retrofits" },
   { name: "RLA & Condition Assessment", slug: "/rla-studies-thermal-power-plants-bangalore" },
-  { name: "Overhauling & Refurbishment", slug: "/services#overhauling" },
-  { name: "LTSA & AMC Services", slug: "/services#ltsa" },
-  { name: "Commissioning & Testing", slug: "/services#commissioning" },
+  { name: "Overhauling & Refurbishment", slug: "/services/turbine-overhauling" },
+  { name: "LTSA & AMC Services", slug: "/services/ltsa-amc-services" },
+  { name: "Commissioning & Testing", slug: "/services/erection-commissioning-testing" },
 ];
 
 const navItems = [
@@ -77,7 +77,7 @@ export function Header() {
     <header className="bg-[#1A2A3A] text-white sticky top-0 z-50">
       {/* Emergency Strip */}
       <div className="bg-[#FF6B35] text-white py-1.5">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
+        <div className="site-shell flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse hidden sm:block" />
             <span className="font-[var(--font-mono)] text-[10px] sm:text-[11px] tracking-wide">
@@ -100,7 +100,7 @@ export function Header() {
       </div>
 
       {/* Main Nav */}
-      <div className="max-w-7xl mx-auto px-4" ref={dropdownRef}>
+      <div className="site-shell" ref={dropdownRef}>
         <div className="flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-3 shrink-0">
             <div className="w-10 h-10 bg-[#FF6B35] rounded flex items-center justify-center">
@@ -143,10 +143,10 @@ export function Header() {
             })}
           </nav>
 
-          <a href="tel:+918904017774" className="hidden lg:flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a2a] text-white px-4 py-2 rounded transition-colors shrink-0">
+          <Link to="/contact" className="hidden lg:flex items-center gap-2 bg-[#FF6B35] hover:bg-[#e55a2a] text-white px-4 py-2 rounded transition-colors shrink-0">
             <Phone className="w-4 h-4" />
-            <span className="text-[12px]">Emergency</span>
-          </a>
+            <span className="text-[12px]">Get in Touch</span>
+          </Link>
 
           <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden text-white p-2">
             {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -181,10 +181,10 @@ export function Header() {
               </div>
               <div className="mt-6 pt-4 border-t border-[#E5E7EB] flex items-center justify-between">
                 <Link to="/products" className="text-[13px] text-[#FF6B35] hover:text-[#e55a2a] font-[var(--font-heading)] tracking-wider">
-                  VIEW ALL 13 PRODUCTS â†’
+                  VIEW ALL 13 PRODUCTS →
                 </Link>
-                <Link to="/specs" className="text-[12px] text-[#6B7280] hover:text-[#1A2A3A]">
-                  Spec Sheets & Compatibility Matrix
+                <Link to="/services" className="text-[12px] text-[#6B7280] hover:text-[#1A2A3A]">
+                  Integration & Field Services
                 </Link>
               </div>
             </div>
@@ -208,9 +208,9 @@ export function Header() {
                 </div>
                 <div className="bg-[#F3F4F6] rounded-xl p-5">
                   <h4 className="font-[var(--font-heading)] text-[14px] text-[#1A2A3A] mb-2">Methodology</h4>
-                  <p className="text-[12px] text-[#6B7280] mb-3">Download our Condition-Based Repair Criteria â€” the framework behind every intervention.</p>
+                  <p className="text-[12px] text-[#6B7280] mb-3">Our Condition-Based Repair Criteria guides every intervention from assessment through recommissioning.</p>
                   <Link to="/services" className="text-[12px] text-[#FF6B35] hover:text-[#e55a2a] font-[var(--font-heading)] tracking-wider">
-                    VIEW SERVICES & METHODOLOGY â†’
+                    VIEW SERVICES & METHODOLOGY →
                   </Link>
                 </div>
               </div>
@@ -245,7 +245,7 @@ export function Header() {
                           ))}
                         </div>
                       ))}
-                      <Link to="/products" onClick={() => setMobileOpen(false)} className="block pt-2 text-[12px] text-[#FF6B35]">All Products â†’</Link>
+                      <Link to="/products" onClick={() => setMobileOpen(false)} className="block pt-2 text-[12px] text-[#FF6B35]">All Products →</Link>
                     </div>
                   )}
                   {openDropdown === item.hasDropdown && item.hasDropdown === "services" && (
@@ -255,7 +255,7 @@ export function Header() {
                           {s.name}
                         </Link>
                       ))}
-                      <Link to="/services" onClick={() => setMobileOpen(false)} className="block pt-2 text-[12px] text-[#FF6B35]">All Services â†’</Link>
+                      <Link to="/services" onClick={() => setMobileOpen(false)} className="block pt-2 text-[12px] text-[#FF6B35]">All Services →</Link>
                     </div>
                   )}
                 </>

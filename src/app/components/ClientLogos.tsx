@@ -16,7 +16,7 @@ const clients = [
 export function ClientLogos() {
   return (
     <section className="py-10 bg-white border-b border-[#E5E7EB]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="site-shell">
         <p className="font-[var(--font-mono)] text-[10px] tracking-[0.2em] text-[#5A6B7D] text-center mb-6 uppercase">
           Trusted by power plants across India
         </p>
