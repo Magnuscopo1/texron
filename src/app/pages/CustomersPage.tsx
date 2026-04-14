@@ -4,6 +4,20 @@ import { Breadcrumb } from "../components/Breadcrumb";
 import { PageTimestamp } from "../components/PageTimestamp";
 import { X } from "lucide-react";
 
+import abbLogo from "../../../imageAssets/abb-1.svg";
+import adityaBirlaLogo from "../../../imageAssets/Aditya_Birla_Group_Logo.svg.png";
+import cccLogo from "../../../imageAssets/ccc.jpg";
+import bidcoAfricaLogo from "../../../imageAssets/bidco africa.png";
+import hckLogo from "../../../imageAssets/hck.jpg";
+import kabrasLogo from "../../../imageAssets/kabras.png";
+import nhpcLogo from "../../../imageAssets/nhpc-limited6715.jpg";
+import rashmiLogo from "../../../imageAssets/rashmi.png";
+import sicagenIndiaLogo from "../../../imageAssets/sicagen_india_logo.jpg";
+import siemensLogo from "../../../imageAssets/Siemens_logo_16-9.png";
+import sukariLogo from "../../../imageAssets/sukari.jpg";
+import tataSteelLogo from "../../../imageAssets/tatasteel.png";
+import triSenLogo from "../../../imageAssets/Tri-Sen-Logo.webp";
+
 interface Client {
   name: string;
   abbr: string;
@@ -28,19 +42,19 @@ const clients: Client[] = [
   { name: "Karnataka Power Corp.", abbr: "KPC", sector: "Hydro", supplied: "Voith hydraulic actuator refurbishment and guide vane control for Francis turbines", capacity: "4 x 55 MW" },
   { name: "Kerala State Electricity", abbr: "KSEB", sector: "Hydro", supplied: "Governor system upgrades for Idukki and Sabarigiri hydroelectric stations", capacity: "Multiple" },
   { name: "Nagarjuna Fertilizers", abbr: "NFL", sector: "Cogen", supplied: "Captive power plant governor retrofit and protection relay upgrade", capacity: "30 MW" },
-  { name: "ABB", abbr: "ABB", sector: "OEM", supplied: "Client reference", logo: "/imageAssets/abb-1.svg" },
-  { name: "Aditya Birla Group", abbr: "ABG", sector: "Private", supplied: "Client reference", logo: "/imageAssets/Aditya_Birla_Group_Logo.svg.png" },
-  { name: "CCC", abbr: "CCC", sector: "Private", supplied: "Client reference", logo: "/imageAssets/ccc.jpg" },
-  { name: "Bidco Africa", abbr: "BIDCO", sector: "Private", supplied: "Client reference", logo: "/imageAssets/bidco africa.png" },
-  { name: "HCK", abbr: "HCK", sector: "Private", supplied: "Client reference", logo: "/imageAssets/hck.jpg" },
-  { name: "Kabras", abbr: "KAB", sector: "Private", supplied: "Client reference", logo: "/imageAssets/kabras.png" },
-  { name: "NHPC Limited", abbr: "NHPC", sector: "Hydro", supplied: "Client reference", logo: "/imageAssets/nhpc-limited6715.jpg" },
-  { name: "Rashmi Group", abbr: "RASH", sector: "Private", supplied: "Client reference", logo: "/imageAssets/rashmi.png" },
-  { name: "Sicagen India", abbr: "SICA", sector: "Private", supplied: "Client reference", logo: "/imageAssets/sicagen_india_logo.jpg" },
-  { name: "Siemens", abbr: "SIE", sector: "OEM", supplied: "Client reference", logo: "/imageAssets/Siemens_logo_16-9.png" },
-  { name: "Sukari", abbr: "SUK", sector: "Private", supplied: "Client reference", logo: "/imageAssets/sukari.jpg" },
-  { name: "Tata Steel", abbr: "TS", sector: "Private", supplied: "Client reference", logo: "/imageAssets/tatasteel.png" },
-  { name: "Tri Sen", abbr: "TRI", sector: "Private", supplied: "Client reference", logo: "/imageAssets/Tri-Sen-Logo.webp" },
+  { name: "ABB", abbr: "ABB", sector: "OEM", supplied: "Client reference", logo: abbLogo },
+  { name: "Aditya Birla Group", abbr: "ABG", sector: "Private", supplied: "Client reference", logo: adityaBirlaLogo },
+  { name: "CCC", abbr: "CCC", sector: "Private", supplied: "Client reference", logo: cccLogo },
+  { name: "Bidco Africa", abbr: "BIDCO", sector: "Private", supplied: "Client reference", logo: bidcoAfricaLogo },
+  { name: "HCK", abbr: "HCK", sector: "Private", supplied: "Client reference", logo: hckLogo },
+  { name: "Kabras", abbr: "KAB", sector: "Private", supplied: "Client reference", logo: kabrasLogo },
+  { name: "NHPC Limited", abbr: "NHPC", sector: "Hydro", supplied: "Client reference", logo: nhpcLogo },
+  { name: "Rashmi Group", abbr: "RASH", sector: "Private", supplied: "Client reference", logo: rashmiLogo },
+  { name: "Sicagen India", abbr: "SICA", sector: "Private", supplied: "Client reference", logo: sicagenIndiaLogo },
+  { name: "Siemens", abbr: "SIE", sector: "OEM", supplied: "Client reference", logo: siemensLogo },
+  { name: "Sukari", abbr: "SUK", sector: "Private", supplied: "Client reference", logo: sukariLogo },
+  { name: "Tata Steel", abbr: "TS", sector: "Private", supplied: "Client reference", logo: tataSteelLogo },
+  { name: "Tri Sen", abbr: "TRI", sector: "Private", supplied: "Client reference", logo: triSenLogo },
 ];
 
 const sectors = ["All", "Thermal", "Hydro", "Private", "Cogen", "OEM"];
