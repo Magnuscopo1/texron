@@ -10,6 +10,7 @@ interface Client {
   sector: string;
   supplied: string;
   capacity?: string;
+  logo?: string;
 }
 
 const clients: Client[] = [
@@ -27,15 +28,30 @@ const clients: Client[] = [
   { name: "Karnataka Power Corp.", abbr: "KPC", sector: "Hydro", supplied: "Voith hydraulic actuator refurbishment and guide vane control for Francis turbines", capacity: "4 x 55 MW" },
   { name: "Kerala State Electricity", abbr: "KSEB", sector: "Hydro", supplied: "Governor system upgrades for Idukki and Sabarigiri hydroelectric stations", capacity: "Multiple" },
   { name: "Nagarjuna Fertilizers", abbr: "NFL", sector: "Cogen", supplied: "Captive power plant governor retrofit and protection relay upgrade", capacity: "30 MW" },
+  { name: "ABB", abbr: "ABB", sector: "OEM", supplied: "Client reference", logo: "/imageAssets/abb-1.svg" },
+  { name: "Aditya Birla Group", abbr: "ABG", sector: "Private", supplied: "Client reference", logo: "/imageAssets/Aditya_Birla_Group_Logo.svg.png" },
+  { name: "CCC", abbr: "CCC", sector: "Private", supplied: "Client reference", logo: "/imageAssets/ccc.jpg" },
+  { name: "Bidco Africa", abbr: "BIDCO", sector: "Private", supplied: "Client reference", logo: "/imageAssets/bidco africa.png" },
+  { name: "HCK", abbr: "HCK", sector: "Private", supplied: "Client reference", logo: "/imageAssets/hck.jpg" },
+  { name: "Kabras", abbr: "KAB", sector: "Private", supplied: "Client reference", logo: "/imageAssets/kabras.png" },
+  { name: "NHPC Limited", abbr: "NHPC", sector: "Hydro", supplied: "Client reference", logo: "/imageAssets/nhpc-limited6715.jpg" },
+  { name: "Rashmi Group", abbr: "RASH", sector: "Private", supplied: "Client reference", logo: "/imageAssets/rashmi.png" },
+  { name: "Sicagen India", abbr: "SICA", sector: "Private", supplied: "Client reference", logo: "/imageAssets/sicagen_india_logo.jpg" },
+  { name: "Siemens", abbr: "SIE", sector: "OEM", supplied: "Client reference", logo: "/imageAssets/Siemens_logo_16-9.png" },
+  { name: "Sukari", abbr: "SUK", sector: "Private", supplied: "Client reference", logo: "/imageAssets/sukari.jpg" },
+  { name: "Tata Steel", abbr: "TS", sector: "Private", supplied: "Client reference", logo: "/imageAssets/tatasteel.png" },
+  { name: "Tri Sen", abbr: "TRI", sector: "Private", supplied: "Client reference", logo: "/imageAssets/Tri-Sen-Logo.webp" },
 ];
 
 const sectors = ["All", "Thermal", "Hydro", "Private", "Cogen", "OEM"];
+
+const logoClientsCount = clients.filter((c) => c.logo).length;
 
 export function CustomersPage() {
   const [filter, setFilter] = useState("All");
   const [selectedClient, setSelectedClient] = useState<Client | null>(null);
 
-  const filtered = filter === "All" ? clients : clients.filter((c) => c.sector === filter);
+  const filtered = (filter === "All" ? clients : clients.filter((c) => c.sector === filter)).filter((c) => !!c.logo);
 
   return (
     <div>
@@ -64,7 +80,11 @@ export function CustomersPage() {
                   filter === s ? "bg-[#1A2A3A] text-white" : "bg-[#F3F4F6] text-[#6B7280] hover:bg-[#E5E7EB]"
                 }`}
               >
-                {s} {s !== "All" && <span className="text-[10px] opacity-60">({clients.filter((c) => c.sector === s).length})</span>}
+                {s}{" "}
+                {s !== "All" && (
+                  <span className="text-[10px] opacity-60">({clients.filter((c) => c.sector === s && c.logo).length})</span>
+                )}
+                {s === "All" && <span className="text-[10px] opacity-60">({logoClientsCount})</span>}
               </button>
             ))}
           </div>
@@ -86,7 +106,11 @@ export function CustomersPage() {
                 className="bg-white border border-[#E5E7EB] rounded-xl p-5 text-center hover:shadow-lg hover:border-[#FF6B35]/30 transition-all group cursor-pointer"
               >
                 <div className="font-[var(--font-heading)] text-[22px] text-[#1A2A3A]/50 group-hover:text-[#1A2A3A] transition-colors mb-1">
-                  {client.abbr}
+                  {client.logo ? (
+                    <img src={client.logo} alt={`${client.name} logo`} className="h-10 w-full object-contain mx-auto" />
+                  ) : (
+                    client.abbr
+                  )}
                 </div>
                 <p className="text-[10px] text-[#6B7280]">{client.name}</p>
                 <div className="mt-2 px-2 py-0.5 bg-[#F3F4F6] rounded text-[9px] font-[var(--font-mono)] text-[#6B7280] inline-block">
