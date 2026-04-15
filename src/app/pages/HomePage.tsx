@@ -231,8 +231,8 @@ export function HomePage() {
           <div className="max-w-2xl mx-auto md:mx-0">
             <h1 className="text-[34px] sm:text-[40px] md:text-[52px] font-bold leading-[1.04] tracking-[-0.01em] mb-3 md:mb-4 text-white mt-0">
               <span className="inline-grid gap-y-0 [grid-auto-rows:min-content] align-top">
-                <span className="block">Powering India's Industries <span className="text-white/75">-</span></span>
-                <span className="block">One <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-200 to-accent">Turbine</span> at a Time</span>
+                <span className="block">ENGINEERING THE ENERGY</span>
+                <span className="block">OF TOMORROW</span>
               </span>
             </h1>
             <p className="text-white/85 text-[18px] leading-8 md:leading-8 max-w-[58ch] mb-3 md:mb-4">
