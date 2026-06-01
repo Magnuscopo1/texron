@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { Phone, Menu, X, MessageCircle, ChevronDown, Zap, Shield, Settings, Wrench, Cpu, Gauge, Radio, AlertTriangle, BarChart3, Box } from "lucide-react";
+import { TexronLogo } from "./TexronLogo";
 
 const productCategories = [
   {
@@ -92,13 +93,9 @@ export function Header() {
       {/* Main Nav */}
       <div className="site-shell" ref={dropdownRef}>
         <div className="flex items-center justify-between py-3">
-          <Link to="/" className="flex items-center gap-3 shrink-0">
-            <div className="w-10 h-10 bg-[#FF6B35] rounded flex items-center justify-center">
-              <span className="font-[var(--font-mono)] text-white text-[14px]">TX</span>
-            </div>
-            <div>
-              <div className="font-[var(--font-heading)] text-[17px] tracking-wider">TEXRON</div>
-              <div className="text-[9px] text-white/50 tracking-[0.2em] uppercase">Power Plant Systems</div>
+          <Link to="/" className="flex items-center gap-2 shrink-0">
+            <div className="w-12 h-12">
+              <TexronLogo />
             </div>
           </Link>
 
