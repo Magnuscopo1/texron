@@ -94,10 +94,9 @@ export function ContactPage() {
                   <div>
                     <h4 className="text-[#1A2A3A] font-semibold text-[14px] mb-1">Our Office</h4>
                     <p className="text-[#5A6B7D] text-[14px] leading-relaxed">
-                      No. V17, 2nd C, Rajagopalnagar Main Road<br />
-                      2nd Stage, Peenya Industrial Area Phase IV<br />
-                      Peenya, Bengaluru, Karnataka - 560 058<br />
-                      India
+                      V-17, 2nd 'C' main, 2nd stage<br />
+                      Peenya Industrial Estate<br />
+                      Bengaluru, Karnataka, India
                     </p>
                   </div>
                 </div>
@@ -160,7 +159,7 @@ export function ContactPage() {
           {/* Map Embed Location - Now Full Width Below Form & Info */}
           <div className="lg:col-span-12 bg-white p-2 rounded-xl shadow-sm border border-[#E8EAED] w-full h-[400px] overflow-hidden relative mt-4">
              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15549.957582737604!2d77.4984!3d13.0039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ce2fb88a8d9%3A0xc34a6565f32a0c6a!2sPeenya%20Industrial%20Area%20Phase%20IV!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7865127343747!2d77.49840372346925!3d13.00399297098947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3ce2fb88a8d9%3A0xc34a6565f32a0c6a!2sV-17%2C%202nd%20C%20Main%2C%202nd%20Stage%2C%20Peenya%20Industrial%20Estate%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" 
                 className="w-full h-full border-0 rounded-lg"
                 allowFullScreen
                 loading="lazy" 
@@ -187,10 +186,9 @@ export function ContactPage() {
             "priceRange": "$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "No. V17, 2nd C, Rajagopalnagar Main Road, 2nd Stage, Peenya Industrial Area Phase IV",
+              "streetAddress": "V-17, 2nd 'C' main, 2nd stage, Peenya Industrial Estate",
               "addressLocality": "Bengaluru",
               "addressRegion": "Karnataka",
-              "postalCode": "560058",
               "addressCountry": "IN"
             },
             "openingHoursSpecification": {

@@ -72,16 +72,16 @@ export function Header() {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-white animate-pulse hidden sm:block" />
             <span className="font-[var(--font-mono)] text-[10px] sm:text-[11px] tracking-wide">
-              24/7 EMERGENCY LINE:
+              24/7 WE ARE AVAILABLE ON
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <a href="tel:+918904017774" className="flex items-center gap-1 font-[var(--font-mono)] text-[11px] hover:underline">
-              <Phone className="w-3 h-3" /> +91 89040 17774
+            <a href="tel:+916364829650" className="flex items-center gap-1 font-[var(--font-mono)] text-[11px] hover:underline">
+              <Phone className="w-3 h-3" /> +91 6364829650
             </a>
             <span className="text-white/40 hidden sm:inline">|</span>
-            <a href="tel:+918904017775" className="hidden sm:flex items-center gap-1 font-[var(--font-mono)] text-[11px] hover:underline">
-              +91 89040 17775
+            <a href="https://wa.me/916364829650" target="_blank" rel="noopener noreferrer" className="hidden sm:flex items-center gap-1 font-[var(--font-mono)] text-[11px] hover:underline">
+              WhatsApp
             </a>
             <a href="https://wa.me/918904017774" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center gap-1 text-[11px] hover:underline">
               <MessageCircle className="w-3 h-3" /> WhatsApp
