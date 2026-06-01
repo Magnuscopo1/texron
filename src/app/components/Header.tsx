@@ -94,7 +94,7 @@ export function Header() {
       <div className="site-shell" ref={dropdownRef}>
         <div className="flex items-center justify-between py-3">
           <Link to="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-12 h-12">
+            <div className="w-20 h-20">
               <TexronLogo />
             </div>
           </Link>
