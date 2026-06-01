@@ -4,16 +4,6 @@ import { Phone, Menu, X, MessageCircle, ChevronDown, Zap, Shield, Settings, Wren
 
 const productCategories = [
   {
-    label: "Turbine Control",
-    items: [
-      { name: "Electronic Governor (DTG-3000)", slug: "electronic-governor", icon: Cpu },
-      { name: "Electro-Hydraulic Governor (EHG-2000)", slug: "electro-hydraulic-governor", icon: Settings },
-      { name: "Turbine Control Panel (TCP-500)", slug: "turbine-control-panel", icon: BarChart3 },
-      { name: "PLC-Based Control Systems", slug: "plc-control-systems", icon: Cpu },
-      { name: "Load Sharing Systems", slug: "load-sharing-systems", icon: Gauge },
-    ],
-  },
-  {
     label: "Electrical & Protection",
     items: [
       { name: "Numerical Protection Relay (NPR-21)", slug: "protection-relay", icon: Shield },

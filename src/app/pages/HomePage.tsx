@@ -6,6 +6,8 @@ import { SEO } from "../seo/SEO";
 import { Button } from "../components/ui/button";
 import { FluidGallery } from "../components/ui/fluid-gallery";
 import { CubeCarousel } from "../components/ui/cube-carousel";
+import { StatsHighlights } from "../components/StatsHighlights";
+import { BusinessPillars } from "../components/BusinessPillars";
 
 // Actual workspace assets
 import heroImage from "../../../imageAssets/IMG_20210124_125451.jpg.jpeg";
@@ -291,6 +293,8 @@ export function HomePage() {
         </div>
       </section>
 
+      <StatsHighlights />
+
       {/* About Section */}
       <section className="py-16 bg-white">
         <div className="site-shell grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -339,6 +343,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <BusinessPillars />
 
       {/* Products & Solutions */}
       <section className="py-16 bg-[#F5F5F5]">

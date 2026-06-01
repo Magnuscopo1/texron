@@ -4,34 +4,6 @@ import { SEO } from "../seo/SEO";
 // Actual workspace assets for founders / engineering background
 import aboutStoryImg from "../../../imageAssets/IMG_20210217_162327.jpg.jpeg";
 
-const journey = [
-  {
-    year: "1988",
-    title: "Foundation",
-    desc: "Texron Power established with a vision to deliver engineering excellence in power generation.",
-  },
-  {
-    year: "2005",
-    title: "Expansion",
-    desc: "Expanded services to include thermal power solutions and established partnerships with leading OEMs.",
-  },
-  {
-    year: "2012",
-    title: "Hydro Power Entry",
-    desc: "Ventured into hydro power sector with successful commissioning of first major hydro project.",
-  },
-  {
-    year: "2018",
-    title: "International Recognition",
-    desc: "Achieved ISO certifications and began serving international clients across Asia.",
-  },
-  {
-    year: "2024",
-    title: "Industry Leader",
-    desc: "Completed 100+ projects with 10 MW gearbox capability and established as industry leader.",
-  },
-] as const;
-
 export function AboutPage() {
   return (
     <div>
@@ -87,63 +59,6 @@ export function AboutPage() {
                   Rooted in actual industrial and field-site expertise.
                 </div>
              </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Journey */}
-      <section className="py-16 bg-white border-b border-[#E8EAED]">
-        <div className="site-shell">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-[#1E3A5F] text-[26px] md:text-[30px] font-semibold mb-2">Our Journey</h2>
-            <p className="text-[#5A6B7D] text-[13px] md:text-[14px]">
-              Milestones that shaped our technical depth and execution maturity.
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Center line (desktop) */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-[#E8EAED] -translate-x-1/2" />
-
-            <div className="space-y-10">
-              {journey.map((m, idx) => {
-                const isRight = idx % 2 === 1;
-                return (
-                  <div key={m.year} className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6 md:gap-10">
-                    {/* Left card */}
-                    <div className={`${isRight ? "md:col-start-1 md:col-span-1 md:opacity-0 md:pointer-events-none" : ""}`}>
-                      {!isRight && (
-                        <div className="bg-white border border-[#E8EAED] rounded-xl px-6 py-5 shadow-sm">
-                          <h3 className="text-[#1A2A3A] font-semibold text-[14px] mb-1">{m.title}</h3>
-                          <p className="text-[#5A6B7D] text-[12px] leading-relaxed">{m.desc}</p>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Year marker */}
-                    <div className="flex items-center justify-start md:justify-center md:col-start-2">
-                      <div className="relative flex items-center">
-                        {/* mobile line */}
-                        <div className="md:hidden absolute left-[14px] -top-8 -bottom-8 w-px bg-[#E8EAED]" />
-                        <div className="w-11 h-11 rounded-full bg-[#1A2A3A] text-white flex items-center justify-center text-[11px] font-semibold shadow-sm ring-4 ring-white">
-                          {m.year}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Right card */}
-                    <div className={`${!isRight ? "md:col-start-3 md:col-span-1 md:opacity-0 md:pointer-events-none" : ""}`}>
-                      {isRight && (
-                        <div className="bg-white border border-[#E8EAED] rounded-xl px-6 py-5 shadow-sm">
-                          <h3 className="text-[#1A2A3A] font-semibold text-[14px] mb-1">{m.title}</h3>
-                          <p className="text-[#5A6B7D] text-[12px] leading-relaxed">{m.desc}</p>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
           </div>
         </div>
       </section>
