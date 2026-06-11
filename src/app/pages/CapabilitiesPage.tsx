@@ -27,36 +27,46 @@ const capabilityGalleryImages = [
 
 const facilityAreas = [
   {
-    title: "Assembly Floor",
+    title: "In house facility",
     icon: Wrench,
-    description: "Governor assembly, wiring, and panel fabrication. Climate-controlled for precision electronics.",
+    description: "Our Peenya Phase IV facility is equipped with state-of-the-art infrastructure for complete turbine services and component manufacturing.",
+    photos: [
+      { directive: "Wide-angle view of the complete Peenya facility showing multiple work zones", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "Facility entrance and main operational areas", fallback: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "Machine floor",
+    icon: Box,
+    description: "Advanced CNC machining center equipped for precision component manufacturing, from servo valve bodies to custom manifolds and actuators.",
+    photos: [
+      { directive: "CNC machining center in operation with precision turbine components", fallback: "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+      { directive: "Machined turbine components ready for assembly", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "Engineering and design",
+    icon: Monitor,
+    description: "State-of-the-art CAD lab with SolidWorks and AutoCAD workstations for 3D modeling, reverse-engineering, and technical documentation.",
+    photos: [
+      { directive: "Engineer at dual-monitor workstation with turbine schematic open in SolidWorks", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
+    ],
+  },
+  {
+    title: "Assembly",
+    icon: Wrench,
+    description: "Climate-controlled assembly floor for governor assembly, wiring, and panel fabrication with precision workstations and quality controls.",
     photos: [
       { directive: "Wide-angle of governor assembly workstations with DTG-3000 units in various stages of assembly", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
       { directive: "Close-up of control panel wiring in progress - neatly bundled cable runs visible", fallback: "https://images.unsplash.com/photo-1570086625762-7c1396540ac5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
     ],
   },
   {
-    title: "Hydraulic Testing Bay",
-    icon: Box,
-    description: "Dedicated test bench for actuator refurbishment - pressure testing, stroke verification, leak testing up to 200 bar.",
+    title: "Testing and QA",
+    icon: Microscope,
+    description: "Comprehensive testing facility including hydraulic bench (up to 200 bar), NDT equipment, protection relay test sets, and governor simulators.",
     photos: [
       { directive: "Hydraulic test bench with Voith actuator mounted - pressure gauges and control valves visible", fallback: "https://images.unsplash.com/photo-1701448149957-b96dbd1926ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
-      { directive: "Close-up of rebuilt servo valve on cleaning bench before final assembly", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
-    ],
-  },
-  {
-    title: "CAD & Re-Engineering Lab",
-    icon: Monitor,
-    description: "3D modeling and reverse-engineering of discontinued OEM components. SolidWorks and AutoCAD workstations.",
-    photos: [
-      { directive: "Engineer at dual-monitor workstation with turbine schematic open in SolidWorks", fallback: "https://images.unsplash.com/photo-1738918937796-743064feefa1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
-    ],
-  },
-  {
-    title: "Quality & NDT Lab",
-    icon: Microscope,
-    description: "Non-destructive testing, dimensional inspection, and metallurgical analysis. Hardness testing and surface roughness measurement.",
-    photos: [
       { directive: "NDT equipment setup - ultrasonic thickness gauge being used on turbine component", fallback: "https://images.unsplash.com/photo-1720670996872-370771b91159?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800" },
     ],
   },
@@ -76,8 +86,8 @@ export function CapabilitiesPage() {
     <div>
       <section className="bg-[#1A2A3A] text-white py-12">
         <div className="site-shell">
-          <Breadcrumb items={[{ label: "Capabilities" }]} />
-          <h1 className="font-[var(--font-heading)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">Capabilities</h1>
+          <Breadcrumb items={[{ label: "Infrastructure" }]} />
+          <h1 className="font-[var(--font-heading)] text-[12px] tracking-[0.2em] text-[#FF6B35] uppercase mb-2">Infrastructure</h1>
           <h2 className="font-[var(--font-heading)] text-[32px] md:text-[40px] leading-tight mb-3 text-white">
             In-House Infrastructure
           </h2>

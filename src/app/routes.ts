@@ -26,12 +26,13 @@ export const router = createBrowserRouter([
       { path: "products/:slug", Component: ProductDetailPage },
       { path: "services", Component: ServicesPage },
       { path: "services/:serviceSlug", Component: ServiceDetailPage },
-      { path: "capabilities", Component: CapabilitiesPage },
+      { path: "infrastructure", Component: CapabilitiesPage },
       { path: "customers", Component: CustomersPage },
       { path: "blog", Component: BlogPage },
       { path: "contact", Component: ContactPage },
       // Legacy routes (kept for backwards compatibility)
       { path: "expertise", Component: ServicesPage },
+      { path: "capabilities", Component: CapabilitiesPage },
       // SEO Silo Architecture - Long-tail landing pages
       { path: "bhel-steam-turbine-governor-retrofits", Component: BhelRetrofitsPage },
       { path: "voith-hydraulic-troubleshooting-spares", Component: VoithHydraulicPage },

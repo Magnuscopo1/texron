@@ -10,7 +10,7 @@ import { StatsHighlights } from "../components/StatsHighlights";
 import { BusinessPillars } from "../components/BusinessPillars";
 
 // Actual workspace assets
-import heroImage from "../../../imageAssets/IMG_20210124_125451.jpg.jpeg";
+import heroImage from "../../../imageAssets/hero-image.jpeg";
 import aboutImage from "../../../imageAssets/IMG-20211124-WA0018.jpg.jpeg";
 import fieldImage1 from "../../../imageAssets/IMG-20211124-WA0037.jpg.jpeg";
 import fieldImage2 from "../../../imageAssets/IMG20220916151959.jpg.jpeg";
@@ -64,52 +64,40 @@ type ServiceHubItem = {
 
 const serviceHubItems: ServiceHubItem[] = [
   {
-    id: "overhauling",
-    title: "Turbine Overhauling & Refurbishment",
-    summary: "Rotor, blade-path, and bearing-zone restoration with strict tolerance checks.",
-    hotspot: { top: "58%", left: "31%", size: "128px" },
-  },
-  {
-    id: "commissioning",
-    title: "Erection & Commissioning",
-    summary: "Cold checks to synchronized load trials for reliable startup handover.",
-    hotspot: { top: "36%", left: "22%", size: "118px" },
-  },
-  {
-    id: "vibration",
-    title: "Vibration Analysis & Diagnostics",
-    summary: "Spectrum-led root-cause analysis for imbalance, misalignment, and wear.",
-    hotspot: { top: "48%", left: "48%", size: "136px" },
-  },
-  {
     id: "rla",
-    title: "RLA (Remaining Life Assessment) for Generators",
-    summary: "Insulation, core, and winding-health evaluation to quantify life extension.",
+    title: "RLA & Condition Assessment",
+    summary: "Insulation, core, and winding-health evaluation to quantify machine life and recommend maintenance strategy.",
     hotspot: { top: "42%", left: "64%", size: "146px" },
   },
   {
+    id: "overhauling",
+    title: "Overhauling",
+    summary: "Complete rotor, blade-path, and bearing-zone restoration with strict tolerance checks and performance validation.",
+    hotspot: { top: "58%", left: "31%", size: "128px" },
+  },
+  {
     id: "ltsa",
-    title: "Long-Term Service Agreements",
-    summary: "Predictive maintenance cadence with rapid escalation support.",
+    title: "LTSA & AMC Services",
+    summary: "Predictive maintenance cadence with performance monitoring and rapid escalation support for long-term reliability.",
     hotspot: { top: "70%", left: "68%", size: "122px" },
   },
   {
-    id: "gearbox",
-    title: "Gear Box Re-Engineering & Retrofit",
-    summary: "Re-machining and redesign support for changing process duty.",
+    id: "commissioning",
+    title: "Erection and commissioning",
+    summary: "Cold checks to synchronized load trials ensuring reliable startup and smooth handover to operations.",
+    hotspot: { top: "36%", left: "22%", size: "118px" },
+  },
+  {
+    id: "engineering",
+    title: "Engineering and consultancy",
+    summary: "Expert consulting on turbine modifications, optimization, and redesign support for changing process requirements.",
+    hotspot: { top: "48%", left: "48%", size: "136px" },
+  },
+  {
+    id: "epc",
+    title: "EPC services",
+    summary: "Complete engineering, procurement, and construction services for new installations and major retrofit projects.",
     hotspot: { top: "66%", left: "46%", size: "120px" },
-  },
-  {
-    id: "relocation",
-    title: "Turbogenerator (TG Set) Relocation",
-    summary: "Disassembly-to-recommission workflow for safe, accurate moves.",
-    hotspot: { top: "30%", left: "76%", size: "112px" },
-  },
-  {
-    id: "troubleshooting",
-    title: "Troubleshooting & Emergency Support",
-    summary: "Fast fault isolation for trips, thermal drift, and unstable operation.",
-    hotspot: { top: "24%", left: "52%", size: "108px" },
   },
 ];
 
@@ -369,29 +357,24 @@ export function HomePage() {
                 icon: Cog,
               },
               {
-                title: "Retrofit & Modernization",
+                title: "Steam turbine Spares",
+                desc: "OEM-quality spare parts and components for steam turbines. Drop-in replacements with performance guarantees.",
+                icon: Settings,
+              },
+              {
+                title: "Refurbishment, Retrofit & Upgrades",
                 desc: "Electronic governors, turbine protection systems, and control upgrades. Improve reliability without full replacement costs.",
                 icon: Settings,
               },
               {
-                title: "Excitation & Generator Protection",
-                desc: "Advanced excitation systems and generator protection relays designed for seamless integration.",
-                icon: Zap,
-              },
-              {
-                title: "Hydraulic Power Packs",
-                desc: "Precision-engineered hydraulic systems for turbine governors - custom-designed for each application.",
-                icon: Sliders,
-              },
-              {
-                title: "Power Management & Control",
-                desc: "Intelligent power management systems and HT/LT control panels designed and built in-house.",
+                title: "Electrical Panels & Spares",
+                desc: "Intelligent power management systems, HT/LT control panels, excitation systems, and generator protection relays designed and built in-house.",
                 icon: HardDrive,
               },
               {
-                title: "Vibration Monitoring Systems",
-                desc: "Real-time vibration monitoring to catch problems before they become critical shutdowns.",
-                icon: Activity,
+                title: "Hydraulics Process Instruments",
+                desc: "Precision-engineered hydraulic systems for turbine governors and process instruments - custom-designed for each application.",
+                icon: Sliders,
               },
             ].map((prod) => (
               <div key={prod.title} className="bg-white p-6 rounded-xl border border-[#E8EAED] hover:shadow-lg transition-shadow">

@@ -28,36 +28,42 @@ interface Client {
 }
 
 const clients: Client[] = [
-  { name: "NTPC Limited", abbr: "NTPC", sector: "Thermal", supplied: "DTG-3000 Governor Retrofits, Protection Relay Upgrades for 210 MW and 500 MW units", capacity: "Multiple units" },
-  { name: "BHEL", abbr: "BHEL", sector: "OEM", supplied: "Governor spare parts, control panel retrofits, reverse-engineered actuator components", capacity: "Vendor partnership" },
-  { name: "KPCL", abbr: "KPCL", sector: "Thermal", supplied: "Complete turbine governor modernization for Raichur TPS and Bellary TPS units", capacity: "4 x 210 MW" },
-  { name: "TANGEDCO", abbr: "TGC", sector: "Thermal", supplied: "RLA studies, governor retrofits, and protection relay upgrades across Tamil Nadu plants", capacity: "Multiple units" },
-  { name: "NLC India", abbr: "NLC", sector: "Thermal", supplied: "Steam turbine governor retrofits and LTSA for lignite-fired units", capacity: "6 x 210 MW" },
-  { name: "APGENCO", abbr: "APG", sector: "Thermal", supplied: "DTG-3000 governor systems, NPR-21 protection relays for Kothagudem and Vijayawada plants", capacity: "210-500 MW" },
-  { name: "TSGENCO", abbr: "TSG", sector: "Thermal", supplied: "Governor retrofits and RLA studies for Telangana state power plants", capacity: "210 MW units" },
-  { name: "JSW Energy", abbr: "JSW", sector: "Private", supplied: "Turbine control panel upgrades, hydraulic actuator refurbishment, annual maintenance", capacity: "300 MW" },
-  { name: "Tata Power", abbr: "TATA", sector: "Private", supplied: "Protection system engineering and governor system commissioning support", capacity: "250 MW" },
-  { name: "CESC Limited", abbr: "CESC", sector: "Private", supplied: "Electro-hydraulic governor modernization for Budge Budge and Titagarh plants", capacity: "120 MW" },
-  { name: "XYZ Sugar Mills", abbr: "XYZ", sector: "Cogen", supplied: "Steam turbine retrofit and 5-year LTSA for extraction turbine cogeneration plant", capacity: "32 MW" },
-  { name: "Karnataka Power Corp.", abbr: "KPC", sector: "Hydro", supplied: "Voith hydraulic actuator refurbishment and guide vane control for Francis turbines", capacity: "4 x 55 MW" },
-  { name: "Kerala State Electricity", abbr: "KSEB", sector: "Hydro", supplied: "Governor system upgrades for Idukki and Sabarigiri hydroelectric stations", capacity: "Multiple" },
-  { name: "Nagarjuna Fertilizers", abbr: "NFL", sector: "Cogen", supplied: "Captive power plant governor retrofit and protection relay upgrade", capacity: "30 MW" },
+  // OEM
   { name: "ABB", abbr: "ABB", sector: "OEM", supplied: "Client reference", logo: abbLogo },
-  { name: "Aditya Birla Group", abbr: "ABG", sector: "Private", supplied: "Client reference", logo: adityaBirlaLogo },
-  { name: "CCC", abbr: "CCC", sector: "Private", supplied: "Client reference", logo: cccLogo },
-  { name: "Bidco Africa", abbr: "BIDCO", sector: "Private", supplied: "Client reference", logo: bidcoAfricaLogo },
-  { name: "HCK", abbr: "HCK", sector: "Private", supplied: "Client reference", logo: hckLogo },
-  { name: "Kabras", abbr: "KAB", sector: "Private", supplied: "Client reference", logo: kabrasLogo },
-  { name: "NHPC Limited", abbr: "NHPC", sector: "Hydro", supplied: "Client reference", logo: nhpcLogo },
-  { name: "Rashmi Group", abbr: "RASH", sector: "Private", supplied: "Client reference", logo: rashmiLogo },
-  { name: "Sicagen India", abbr: "SICA", sector: "Private", supplied: "Client reference", logo: sicagenIndiaLogo },
   { name: "Siemens", abbr: "SIE", sector: "OEM", supplied: "Client reference", logo: siemensLogo },
-  { name: "Sukari", abbr: "SUK", sector: "Private", supplied: "Client reference", logo: sukariLogo },
-  { name: "Tata Steel", abbr: "TS", sector: "Private", supplied: "Client reference", logo: tataSteelLogo },
-  { name: "Tri Sen", abbr: "TRI", sector: "Private", supplied: "Client reference", logo: triSenLogo },
+  { name: "CCC", abbr: "CCC", sector: "OEM", supplied: "Client reference", logo: cccLogo },
+  { name: "Tri-sen", abbr: "TRI", sector: "OEM", supplied: "Client reference", logo: triSenLogo },
+  { name: "DEIF", abbr: "DEIF", sector: "OEM", supplied: "Governor and protection system partnership" },
+  { name: "Voith Turbo machineries", abbr: "VOITH", sector: "OEM", supplied: "Hydraulic system components and support" },
+  
+  // Public Sector
+  { name: "Mahagenco", abbr: "MGEN", sector: "Public sector", supplied: "Governor retrofits and LTSA for Maharashtra thermal power plants", capacity: "Multiple units" },
+  { name: "NHPC Limited", abbr: "NHPC", sector: "Public sector", supplied: "Hydroelectric station upgrades and maintenance", logo: nhpcLogo },
+  { name: "KSEB", abbr: "KSEB", sector: "Public sector", supplied: "Governor system upgrades for Kerala hydroelectric stations", capacity: "Multiple" },
+  
+  // End User (India)
+  { name: "HCK", abbr: "HCK", sector: "End User(India)", supplied: "Client reference", logo: hckLogo },
+  { name: "Aditya Birla Group", abbr: "ABG", sector: "End User(India)", supplied: "Client reference", logo: adityaBirlaLogo },
+  { name: "Haldia Petrochemicals", abbr: "HALD", sector: "End User(India)", supplied: "Captive power plant turbine retrofit and maintenance" },
+  { name: "Rashmi Group", abbr: "RASH", sector: "End User(India)", supplied: "Client reference", logo: rashmiLogo },
+  { name: "Tata Steel", abbr: "TS", sector: "End User(India)", supplied: "Client reference", logo: tataSteelLogo },
+  { name: "Sanvijay Alloys & Power Pvt Ltd", abbr: "SANV", sector: "End User(India)", supplied: "Turbine governor retrofit and protection systems" },
+  { name: "Jaypee Nigrie STPP ltd", abbr: "JAYPEE", sector: "End User(India)", supplied: "Steam turbine retrofit and annual maintenance" },
+  
+  // End User (Abroad)
+  { name: "Mansa sugars Ltd", abbr: "MANSA", sector: "End User(Abroad)", supplied: "Turbine overhauling and LTSA services" },
+  { name: "Mumias sugars ltd", abbr: "MUMIAS", sector: "End User(Abroad)", supplied: "Governor retrofit and performance optimization" },
+  { name: "Hoima Sugar Ltd", abbr: "HOIMA", sector: "End User(Abroad)", supplied: "Cogeneration plant turbine services" },
+  { name: "Kabras sugar ltd", abbr: "KAB", sector: "End User(Abroad)", supplied: "Client reference", logo: kabrasLogo },
+  { name: "Sukari Industries Ltd", abbr: "SUK", sector: "End User(Abroad)", supplied: "Client reference", logo: sukariLogo },
+  { name: "Bidco Africa", abbr: "BIDCO", sector: "End User(Abroad)", supplied: "Client reference", logo: bidcoAfricaLogo },
+  { name: "Indorama (ICS, Senegal)", abbr: "INDOR", sector: "End User(Abroad)", supplied: "Turbine control and protection systems" },
+  
+  // System Houses
+  { name: "Sicagen India", abbr: "SICA", sector: "System House", supplied: "Client reference", logo: sicagenIndiaLogo },
 ];
 
-const sectors = ["All", "Thermal", "Hydro", "Private", "Cogen", "OEM"];
+const sectors = ["All", "OEM", "Public sector", "End User(India)", "End User(Abroad)", "System House"];
 
 const logoClientsCount = clients.filter((c) => c.logo).length;
 

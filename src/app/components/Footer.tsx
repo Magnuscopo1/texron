@@ -30,7 +30,7 @@ export function Footer() {
               { label: "About Us", path: "/about" },
               { label: "Products", path: "/products" },
               { label: "Services", path: "/services" },
-              { label: "Capabilities", path: "/capabilities" },
+              { label: "Infrastructure", path: "/infrastructure" },
               { label: "Customers", path: "/customers" },
               { label: "Blog", path: "/blog" },
               { label: "Contact", path: "/contact" },

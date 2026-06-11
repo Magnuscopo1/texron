@@ -13,6 +13,15 @@ type BusinessPillar = {
 
 const pillars: BusinessPillar[] = [
   {
+    id: "turbines",
+    icon: Zap,
+    title: "Steam Turbines",
+    description:
+      "Custom-engineered steam turbines for industrial and utility applications. New units and refurbished turbines with guaranteed performance.",
+    ctaText: "Explore Turbines",
+    ctaLink: "/products",
+  },
+  {
     id: "products",
     icon: Box,
     title: "Engineered Products",
@@ -38,15 +47,6 @@ const pillars: BusinessPillar[] = [
       "Assembly, testing, re-engineering, and CNC machining at our Peenya facility. Complete vertical integration.",
     ctaText: "View Capabilities",
     ctaLink: "/capabilities",
-  },
-  {
-    id: "turbines",
-    icon: Zap,
-    title: "Steam Turbines",
-    description:
-      "Custom-engineered steam turbines for industrial and utility applications. New units and refurbished turbines with guaranteed performance.",
-    ctaText: "Explore Turbines",
-    ctaLink: "/products",
   },
 ];
 
